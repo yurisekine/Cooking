@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D05E89531C75D15600290E19 /* FoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05E89521C75D15600290E19 /* FoodViewController.swift */; };
 		D0A2216C1C759AAB006E2F2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A2216B1C759AAB006E2F2B /* AppDelegate.swift */; };
 		D0A2216E1C759AAB006E2F2B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A2216D1C759AAB006E2F2B /* ViewController.swift */; };
 		D0A221711C759AAB006E2F2B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0A2216F1C759AAB006E2F2B /* Main.storyboard */; };
@@ -14,6 +15,7 @@
 		D0A221761C759AAB006E2F2B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0A221741C759AAB006E2F2B /* LaunchScreen.storyboard */; };
 		D0A221811C759AAB006E2F2B /* CookingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A221801C759AAB006E2F2B /* CookingTests.swift */; };
 		D0A2218C1C759AAB006E2F2B /* CookingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A2218B1C759AAB006E2F2B /* CookingUITests.swift */; };
+		D0BAA67C1C75DC9500346874 /* AllViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BAA67B1C75DC9500346874 /* AllViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D05E89521C75D15600290E19 /* FoodViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodViewController.swift; sourceTree = "<group>"; };
 		D0A221681C759AAB006E2F2B /* Cooking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cooking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0A2216B1C759AAB006E2F2B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0A2216D1C759AAB006E2F2B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +50,7 @@
 		D0A221871C759AAB006E2F2B /* CookingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CookingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0A2218B1C759AAB006E2F2B /* CookingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookingUITests.swift; sourceTree = "<group>"; };
 		D0A2218D1C759AAB006E2F2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0BAA67B1C75DC9500346874 /* AllViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,8 @@
 				D0A221721C759AAB006E2F2B /* Assets.xcassets */,
 				D0A221741C759AAB006E2F2B /* LaunchScreen.storyboard */,
 				D0A221771C759AAB006E2F2B /* Info.plist */,
+				D05E89521C75D15600290E19 /* FoodViewController.swift */,
+				D0BAA67B1C75DC9500346874 /* AllViewController.swift */,
 			);
 			path = Cooking;
 			sourceTree = "<group>";
@@ -260,6 +266,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0A2216E1C759AAB006E2F2B /* ViewController.swift in Sources */,
+				D05E89531C75D15600290E19 /* FoodViewController.swift in Sources */,
+				D0BAA67C1C75DC9500346874 /* AllViewController.swift in Sources */,
 				D0A2216C1C759AAB006E2F2B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -485,6 +493,7 @@
 				D0A221921C759AAB006E2F2B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D0A221931C759AAB006E2F2B /* Build configuration list for PBXNativeTarget "CookingTests" */ = {
 			isa = XCConfigurationList;
@@ -493,6 +502,7 @@
 				D0A221951C759AAB006E2F2B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D0A221961C759AAB006E2F2B /* Build configuration list for PBXNativeTarget "CookingUITests" */ = {
 			isa = XCConfigurationList;
@@ -501,6 +511,7 @@
 				D0A221981C759AAB006E2F2B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

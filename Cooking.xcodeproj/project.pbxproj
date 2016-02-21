@@ -11,6 +11,12 @@
 		D0386F2B1C79FF7000329359 /* omu.gif in Resources */ = {isa = PBXBuildFile; fileRef = D0386F2A1C79FF7000329359 /* omu.gif */; };
 		D0386F2D1C79FF7800329359 /* han.gif in Resources */ = {isa = PBXBuildFile; fileRef = D0386F2C1C79FF7700329359 /* han.gif */; };
 		D0386F2F1C7A176B00329359 /* zai.gif in Resources */ = {isa = PBXBuildFile; fileRef = D0386F2E1C7A176B00329359 /* zai.gif */; };
+		D0386F311C7A18B600329359 /* tukuru.gif in Resources */ = {isa = PBXBuildFile; fileRef = D0386F301C7A18B600329359 /* tukuru.gif */; };
+		D0386F371C7A215F00329359 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D0386F321C7A215F00329359 /* 1.jpg */; };
+		D0386F381C7A215F00329359 /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D0386F331C7A215F00329359 /* 2.jpg */; };
+		D0386F391C7A215F00329359 /* 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D0386F341C7A215F00329359 /* 3.jpg */; };
+		D0386F3A1C7A215F00329359 /* 4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D0386F351C7A215F00329359 /* 4.jpg */; };
+		D0386F3B1C7A215F00329359 /* 5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D0386F361C7A215F00329359 /* 5.jpg */; };
 		D05E89531C75D15600290E19 /* FoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05E89521C75D15600290E19 /* FoodViewController.swift */; };
 		D08F7B861C79A2B100A62AED /* meatpotato.gif in Resources */ = {isa = PBXBuildFile; fileRef = D08F7B851C79A2B100A62AED /* meatpotato.gif */; };
 		D0A2216C1C759AAB006E2F2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A2216B1C759AAB006E2F2B /* AppDelegate.swift */; };
@@ -45,6 +51,12 @@
 		D0386F2A1C79FF7000329359 /* omu.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = omu.gif; sourceTree = "<group>"; };
 		D0386F2C1C79FF7700329359 /* han.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = han.gif; sourceTree = "<group>"; };
 		D0386F2E1C7A176B00329359 /* zai.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = zai.gif; sourceTree = "<group>"; };
+		D0386F301C7A18B600329359 /* tukuru.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = tukuru.gif; sourceTree = "<group>"; };
+		D0386F321C7A215F00329359 /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
+		D0386F331C7A215F00329359 /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
+		D0386F341C7A215F00329359 /* 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpg; sourceTree = "<group>"; };
+		D0386F351C7A215F00329359 /* 4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4.jpg; sourceTree = "<group>"; };
+		D0386F361C7A215F00329359 /* 5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 5.jpg; sourceTree = "<group>"; };
 		D05E89521C75D15600290E19 /* FoodViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodViewController.swift; sourceTree = "<group>"; };
 		D08F7B851C79A2B100A62AED /* meatpotato.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = meatpotato.gif; sourceTree = "<group>"; };
 		D0A221681C759AAB006E2F2B /* Cooking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cooking.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -111,6 +123,12 @@
 		D0A2216A1C759AAB006E2F2B /* Cooking */ = {
 			isa = PBXGroup;
 			children = (
+				D0386F321C7A215F00329359 /* 1.jpg */,
+				D0386F331C7A215F00329359 /* 2.jpg */,
+				D0386F341C7A215F00329359 /* 3.jpg */,
+				D0386F351C7A215F00329359 /* 4.jpg */,
+				D0386F361C7A215F00329359 /* 5.jpg */,
+				D0386F301C7A18B600329359 /* tukuru.gif */,
 				D0386F2E1C7A176B00329359 /* zai.gif */,
 				D0386F2C1C79FF7700329359 /* han.gif */,
 				D0386F2A1C79FF7000329359 /* omu.gif */,
@@ -253,12 +271,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0386F3A1C7A215F00329359 /* 4.jpg in Resources */,
+				D0386F391C7A215F00329359 /* 3.jpg in Resources */,
 				D0386F2D1C79FF7800329359 /* han.gif in Resources */,
 				D08F7B861C79A2B100A62AED /* meatpotato.gif in Resources */,
+				D0386F381C7A215F00329359 /* 2.jpg in Resources */,
 				D0A221761C759AAB006E2F2B /* LaunchScreen.storyboard in Resources */,
 				D0A221731C759AAB006E2F2B /* Assets.xcassets in Resources */,
+				D0386F3B1C7A215F00329359 /* 5.jpg in Resources */,
 				D0386F2F1C7A176B00329359 /* zai.gif in Resources */,
 				D0A221711C759AAB006E2F2B /* Main.storyboard in Resources */,
+				D0386F371C7A215F00329359 /* 1.jpg in Resources */,
+				D0386F311C7A18B600329359 /* tukuru.gif in Resources */,
 				D0386F2B1C79FF7000329359 /* omu.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

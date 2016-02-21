@@ -55,6 +55,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         let row = menuPickerView.selectedRowInComponent(0)
         foodViewController.nameText = menuArray[row]
         foodViewController.foodimage = menuImageArray[row]
+        foodViewController.foodrow = row
     }
     
     

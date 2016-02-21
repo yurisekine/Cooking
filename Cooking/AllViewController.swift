@@ -14,7 +14,7 @@ class AllViewController: UIViewController {
     @IBOutlet var foodlabel: UILabel!
     @IBOutlet var ingredientImage: UIImageView!
     @IBOutlet var makeLabel: UILabel!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     
@@ -25,6 +25,8 @@ class AllViewController: UIViewController {
         ingredientImage.image = UIImage(named: "zai.gif")
         
         // Do any additional setup after loading the view.
+        
+        
         
         scrollView.contentSize = CGSizeMake(self.view.frame.size.width, 1200)
     }

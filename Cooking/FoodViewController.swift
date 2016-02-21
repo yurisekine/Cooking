@@ -14,12 +14,14 @@ class FoodViewController: UIViewController {
     var nameText: String?
     @IBOutlet var foodImage: UIImageView!
     var foodimage: UIImage?
+    var foodrow: Int!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         nameLabel.text = nameText
         foodImage.image = foodimage
+        
         
         // Do any additional setup after loading the view.
     }
@@ -28,6 +30,7 @@ class FoodViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
 
    /*
     //前の画面に戻る
@@ -35,7 +38,6 @@ class FoodViewController: UIViewController {
         self.navigationController?.popViewControllerAnimated(true)
     }
 */
-    
     
     
 

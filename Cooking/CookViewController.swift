@@ -1,25 +1,23 @@
 //
-//  FoodViewController.swift
+//  CookViewController.swift
 //  Cooking
 //
-//  Created by SEKINE YURI on 2016/02/18.
+//  Created by SEKINE YURI on 2016/02/21.
 //  Copyright © 2016年 SEKINE YURI. All rights reserved.
 //
 
 import UIKit
 
-class FoodViewController: UIViewController {
+class CookViewController: UIViewController {
     
-    @IBOutlet var nameLabel: UILabel!
-    var nameText: String?
-    @IBOutlet var foodImage: UIImageView!
-    var foodimage: UIImage?
+    @IBOutlet var foodContentsText: UILabel!
+    @IBOutlet var foodContentsImage: UIImageView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        foodContentsText.text = "では、さっそく料理を始めましょう！"
         
-        nameLabel.text = nameText
-        foodImage.image = foodimage
         
         // Do any additional setup after loading the view.
     }
@@ -28,13 +26,7 @@ class FoodViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-   /*
-    //前の画面に戻る
-    @IBAction func clickBack(sender: ViewController) {
-        self.navigationController?.popViewControllerAnimated(true)
-    }
-*/
+    
     
     
     

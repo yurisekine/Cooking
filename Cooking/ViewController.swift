@@ -10,17 +10,22 @@ import UIKit
 
 class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
+    
     @IBOutlet var menuPickerView: UIPickerView!
+    var menuImageArray: [UIImage]!
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         menuPickerView.delegate = self
         menuPickerView.dataSource = self
+        
+        menuImageArray = [UIImage(named: "meatpotato.gif")!,UIImage(named: "han.gif")!,UIImage(named: "omu.gif")!]
     }
     
-    let menu = [
-        "肉じゃか",
+    let menuArray = [
+        "肉じゃが",
         "ハンバーグ",
         "オムライス"
     ]
@@ -30,18 +35,39 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         // Dispose of any resources that can be recreated.
     }
     
+    //列の数
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
         return 1
     }
     
+    //行の数
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return menu.count
+        return menuArray.count
     }
     
+    //menuの表示
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
-        return menu[row]
+        return menuArray[row]
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let foodViewController = segue.destinationViewController as! FoodViewController
+        let row = menuPickerView.selectedRowInComponent(0)
+        foodViewController.nameText = menuArray[row]
+        foodViewController.foodimage = menuImageArray[row]
+    }
+    
+    
+    /*
+    @IBAction func clickStart(sender: AnyObject) {
+    menuPickerView.selectRow(1, inComponent: 0, animated: true)
+    }*/
+    /*
+    override func viewWillDisappear(animated: Bool) {
+        super.viewDidDisappear(animated)
+        var appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        AppDelegate.viewVal = .text!
+    }*/
     
 
 

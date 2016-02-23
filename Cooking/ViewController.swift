@@ -13,7 +13,13 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     @IBOutlet var menuPickerView: UIPickerView!
     var menuImageArray: [UIImage]!
-   
+    
+    let menuArray = [
+        "卵焼き",
+        "肉じゃが",
+        "ハンバーグ",
+        "オムライス"
+    ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,20 +27,20 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         menuPickerView.delegate = self
         menuPickerView.dataSource = self
         
-        menuImageArray = [UIImage(named: "meatpotato.gif")!,UIImage(named: "han.gif")!,UIImage(named: "omu.gif")!]
+        menuImageArray = [
+                UIImage(named: "egg.gif")!,
+                UIImage(named: "meatpotato.gif")!,
+                UIImage(named: "han.gif")!,
+                UIImage(named: "omu.gif")!
+        ]
     }
-    
-    let menuArray = [
-        "肉じゃが",
-        "ハンバーグ",
-        "オムライス"
-    ]
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    //picker view
     //列の数
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
         return 1
@@ -45,32 +51,20 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         return menuArray.count
     }
     
+    
     //menuの表示
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
         return menuArray[row]
     }
+
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let foodViewController = segue.destinationViewController as! FoodViewController
         let row = menuPickerView.selectedRowInComponent(0)
-        foodViewController.nameText = menuArray[row]
-        foodViewController.foodimage = menuImageArray[row]
-        foodViewController.foodrow = row
+        foodViewController.nameText = menuArray[row]   //料理名
+        foodViewController.foodimage = menuImageArray[row]  //料理の画像
+        foodViewController.number = row  //menuPickerViewの番号
     }
     
-    
-    /*
-    @IBAction func clickStart(sender: AnyObject) {
-    menuPickerView.selectRow(1, inComponent: 0, animated: true)
-    }*/
-    /*
-    override func viewWillDisappear(animated: Bool) {
-        super.viewDidDisappear(animated)
-        var appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        AppDelegate.viewVal = .text!
-    }*/
-    
-
-
 }
 

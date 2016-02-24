@@ -49,7 +49,7 @@ class CookViewController: UIViewController {
     
     func Egg() {
         foodTextArray = ["",""]
-        foodImageArray = [UIImage(named: "")!, UIImage(named: "")!]
+        foodImageArray = [UIImage(named: "1.jpg")!, UIImage(named: "2.jpg")!]
     }
     func MeatPotato() {
         
@@ -74,12 +74,12 @@ class CookViewController: UIViewController {
     }
     func hamburg() {
         foodTextArray = ["",""]
-        foodImageArray = [UIImage(named: "")!, UIImage(named: "")!]
+        foodImageArray = [UIImage(named: "1.jpg")!, UIImage(named: "2.jpg")!]
         
     }
     func omuRice() {
         foodTextArray = ["",""]
-        foodImageArray = [UIImage(named: "")!, UIImage(named: "")!]
+        foodImageArray = [UIImage(named: "1.jpg")!, UIImage(named: "2.jpg")!]
     }
     
     @IBAction func plus() {

@@ -70,7 +70,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="作り方一覧"/>
                                 <connections>
-                                    <segue destination="n9Q-ST-yJu" kind="show" id="xxx-uh-WJI"/>
+                                    <segue destination="n9Q-ST-yJu" kind="show" identifier="all" id="xxx-uh-WJI"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S1C-V2-a0C">
@@ -78,7 +78,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="つくる"/>
                                 <connections>
-                                    <segue destination="qvV-OD-Afk" kind="show" action="showDetailViewController:sender:" id="mMt-Vp-TLR"/>
+                                    <segue destination="qvV-OD-Afk" kind="show" identifier="cook" action="showDetailViewController:sender:" id="mMt-Vp-TLR"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P8A-lh-Voo">

@@ -35,13 +35,24 @@ class FoodViewController: UIViewController {
     
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    //    let allViewController = segue.destinationViewController as! AllViewController
+        
         let row = number
-     //   allViewController.number = row   //料理名
-
-        let cookViewController = segue.destinationViewController as! CookViewController
-        cookViewController.foodnumber = row
+        
+        if segue.identifier == "all" {
+            
+            let allViewController = segue.destinationViewController as! AllViewController
+            allViewController.number = row   //料理名
+            
+        } else if segue.identifier == "cook" {
+            
+            let cookViewController = segue.destinationViewController as! CookViewController
+            cookViewController.foodnumber = row
+            
+        } else {
+            //
+        }
     }
+    
     
 
    /*

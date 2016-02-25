@@ -12,7 +12,9 @@ class CookViewController: UIViewController {
     
     @IBOutlet var foodContentsText: UILabel!
     @IBOutlet var foodContentsImage: UIImageView!
-    var number: Int = 0
+    @IBOutlet var processBar: UIProgressView!
+
+    var number: Float = 1
     var foodTextArray: [String]!
     var foodImageArray: [UIImage]!
 
@@ -20,8 +22,7 @@ class CookViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
+  
         
         if foodnumber == 0 {
             Egg()
@@ -39,6 +40,9 @@ class CookViewController: UIViewController {
         foodContentsImage.image = foodImageArray[0]
         
         
+        processBar.transform = CGAffineTransformMakeScale(2.0, 3.0)
+        processBar.progress = number / Float(foodTextArray.count)
+        
         // Do any additional setup after loading the view.
     }
     
@@ -50,11 +54,13 @@ class CookViewController: UIViewController {
     func Egg() {
         foodTextArray = ["",""]
         foodImageArray = [UIImage(named: "1.jpg")!, UIImage(named: "2.jpg")!]
+
     }
     func MeatPotato() {
         
         foodTextArray = ["じゃがいもは皮をむき、一口大に切って、水にさらして水気を切る",
-            "たまねぎは2cm幅のくし切りにする。","にんじんは小さめの一口大の乱切り、しょうがは皮をこそげ落として、薄く輪切りにする。",
+            "たまねぎは2cm幅のくし切りにする。",
+            "にんじんは小さめの一口大の乱切り、しょうがは皮をこそげ落として、薄く輪切りにする。",
             "さやいんげんは筋を取り、熱湯でさっと茹でて引き上げ、長さ3cmに切る。",
             "さやいんげんを茹でた湯で、しらたきを１～２分茹でて水気を切り、ざく切りにする。",
             "豚肉は一口大に切る。",
@@ -83,18 +89,25 @@ class CookViewController: UIViewController {
     }
     
     @IBAction func plus() {
-        if number < foodTextArray.count {
-        number = number + 1
-        foodContentsText.text = foodTextArray[number]
-        foodContentsImage.image = foodImageArray[number]
+        if number < Float(foodTextArray.count - 1) { //7
+            number = number + 1
+            foodContentsText.text = foodTextArray[Int(number - 1)]
+            foodContentsImage.image = foodImageArray[Int(number - 1)]
+            processBar.setProgress(number / Float(foodTextArray.count) , animated: true)
+        }else if number == Float(foodTextArray.count - 1) {
+            number = number + 1
+            foodContentsText.text = foodTextArray[Int(number - 1)]
+            foodContentsImage.image = foodImageArray[Int(number - 1)]
+            processBar.setProgress(number / Float(foodTextArray.count) , animated: true)
         }
     }
     
     @IBAction func minus() {
-        if number > 0 {
-        number = number - 1
-            foodContentsText.text = foodTextArray[number]
-        foodContentsImage.image = foodImageArray[number]
+        if number > 1 {
+            number = number - 1
+            foodContentsText.text = foodTextArray[Int(number - 1)]
+            foodContentsImage.image = foodImageArray[Int(number - 1)]
+            processBar.setProgress(number / Float(foodTextArray.count) , animated: true)
         }
     }
     

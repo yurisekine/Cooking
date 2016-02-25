@@ -10,6 +10,7 @@ import UIKit
 
 class FoodViewController: UIViewController {
     
+    @IBOutlet var timeLabel: UILabel!
     @IBOutlet var nameLabel: UILabel!
     var nameText: String?
     
@@ -25,6 +26,17 @@ class FoodViewController: UIViewController {
         nameLabel.text = nameText
         foodImage.image = foodimage
         
+        if number == 0 {
+            timeLabel.text = "所要時間　10分"
+        } else if number == 1 {
+            timeLabel.text = ""
+        } else if number == 2 {
+            timeLabel.text = ""
+        } else if number == 3 {
+            timeLabel.text = ""
+        } else {
+        
+        }
         // Do any additional setup after loading the view.
     }
 

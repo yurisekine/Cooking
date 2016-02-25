@@ -7,18 +7,22 @@
 //
 
 import UIKit
+import ActionSheetPicker_3_0
 
-class AllViewController: UIViewController {
+class AllViewController: UIViewController, UIActionSheetDelegate {
     
     @IBOutlet var scrollView: UIScrollView!    
     @IBOutlet var foodlabel: UILabel!
     @IBOutlet var ingredientImage: UIImageView!
     @IBOutlet var makeLabel: UILabel!
+    @IBOutlet var personLabel: UILabel!
 
     var number: Int?
+    var personNumber: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         scrollView.contentSize = CGSizeMake(self.view.frame.size.width, 1200)
         
@@ -32,7 +36,7 @@ class AllViewController: UIViewController {
         } else if number == 3{
             omuRice()
         } else {
-            foodlabel.text = "\(number)"
+        //    foodlabel.text = "\(number)"
         }
         
         // Do any additional setup after loading the view.
@@ -44,11 +48,20 @@ class AllViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    
     func Egg() {
-        foodlabel.text = "卵３個 \n だし汁大さじ３ \n 塩ひとつまみ \n しょうゆ小さじ１ \n 酒大さじ１ \n 油大さじ１"
+        
+        foodlabel.layer.position = CGPoint(x: self.view.bounds.width/2, y: 200)
+        foodlabel.text = "卵\(personNumber)個 \n だし汁大さじ\(personNumber) \n 塩ひとつまみ \n しょうゆ小さじ\(personNumber) \n 酒大さじ\(personNumber) \n 油大さじ１" //卵\3個 \n だし汁大さじ３ \n 塩ひとつまみ \n しょうゆ小さじ１ \n 酒大さじ１ \n 油大さじ１"
+
+        foodlabel.numberOfLines = 0
+        foodlabel.sizeToFit()
+        self.view.addSubview(foodlabel)
+        
         makeLabel.text = "玉子はまぜ過ぎない！ \n フライパンなどは、強火で予熱！流し入れたら火を落として一定に！ \n 焦げ防止は、多めに玉子液を流し込む！"
         ingredientImage.image = UIImage(named: "zai.gif")
+        makeLabel.numberOfLines = 0
+        makeLabel.sizeToFit()
+  
     }
     
     func MeatPotato() {
@@ -69,6 +82,31 @@ class AllViewController: UIViewController {
         ingredientImage.image = UIImage(named: "zai.gif")
     }
     
+    
+    @IBAction func ButtonTapped(sender: UIButton) {
+        self.personPicker(sender)
+    }
+    
+    func personPicker(sender: UIButton) {
+        let person: [AnyObject] = ["1人分","2人分","3人分","4人分"]
+        let actionSheet = ActionSheetStringPicker(title: "choice person", rows: person, initialSelection: 0, doneBlock: {(picker, selectedIndex, id) -> Void in print("picker...\(picker), selectedIndex...\(selectedIndex), id...\(id)")
+            
+            self.personNumber = selectedIndex + 1
+            self.personLabel.text = person[selectedIndex] as! String
+            self.Egg()
+            
+            }, cancelBlock: { (picker) -> Void in
+                print("\(picker)")
+            }, origin: sender)
+        
+        
+        
+        
+        actionSheet.showActionSheetPicker()
+    }
+    
+    
+
 
     /*
     // MARK: - Navigation

@@ -127,6 +127,35 @@
             </objects>
             <point key="canvasLocation" x="1206.5" y="321.5"/>
         </scene>
+        <!--Web View Controller-->
+        <scene sceneID="KfE-hY-ulH">
+            <objects>
+                <viewController id="icc-PP-wDx" customClass="WebViewController" customModule="Cooking" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6ej-4Y-gqA"/>
+                        <viewControllerLayoutGuide type="bottom" id="ys0-ch-4Ki"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OGQ-fM-cxf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eh8-q7-tdp">
+                                <rect key="frame" x="10" y="101" width="355" height="553"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="3g8-9W-xN3"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="webView" destination="eh8-q7-tdp" id="zr4-tk-qX8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FPt-gd-elU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2183.5" y="1263.5"/>
+        </scene>
         <!--Cook View Controller-->
         <scene sceneID="LBV-tR-S18">
             <objects>
@@ -177,10 +206,23 @@
                                 <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jeg-Pz-vUD">
+                                <rect key="frame" x="319" y="221" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="icc-PP-wDx" kind="push" id="xJz-yb-vSy"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.72156862745098038" green="0.61568627450980395" blue="0.49803921568627452" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" id="pef-a7-CkR"/>
+                    <navigationItem key="navigationItem" id="pef-a7-CkR">
+                        <barButtonItem key="rightBarButtonItem" title="memo" id="Kjm-SK-G4j">
+                            <connections>
+                                <segue destination="RUw-vT-1Qq" kind="push" id="A31-2S-bp8"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="foodContentsImage" destination="IU1-A5-6Gn" id="Ke5-hN-d4J"/>
@@ -192,6 +234,43 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="avG-j8-HVw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1695.5" y="783.5"/>
+        </scene>
+        <!--Memo View Controller-->
+        <scene sceneID="Wjw-xt-bYv">
+            <objects>
+                <viewController id="RUw-vT-1Qq" customClass="memoViewController" customModule="Cooking" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="EPN-Vi-PSf"/>
+                        <viewControllerLayoutGuide type="bottom" id="fyO-Ms-a2e"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VJG-PS-QHf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="memo" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cWQ-JH-utS">
+                                <rect key="frame" x="33" y="154" width="308" height="171"/>
+                                <color key="backgroundColor" white="1" alpha="0.72605064655172413" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.78888536053174851" green="0.63106822169493182" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="2hm-xO-8oi">
+                        <barButtonItem key="rightBarButtonItem" title="決定" id="B3u-au-gdY">
+                            <connections>
+                                <action selector="memoDoneButton" destination="RUw-vT-1Qq" id="SGg-Mw-InZ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="memoTextView" destination="cWQ-JH-utS" id="nyR-ID-kab"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xMi-4K-vDl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2183.5" y="494.5"/>
         </scene>
         <!--All View Controller-->
         <scene sceneID="goJ-5Y-5YO">
@@ -247,6 +326,11 @@
                         </subviews>
                         <color key="backgroundColor" red="0.72156862745098038" green="0.61568627450980395" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
                     </scrollView>
+                    <toolbarItems>
+                        <barButtonItem title="Item" id="2b9-0j-mcT"/>
+                        <barButtonItem title="Item" id="Jf9-v3-p8l"/>
+                    </toolbarItems>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="foodlabel" destination="URd-Re-2cp" id="lag-3c-kiq"/>

@@ -20,6 +20,8 @@
 		D0386F3A1C7A215F00329359 /* 4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D0386F351C7A215F00329359 /* 4.jpg */; };
 		D0386F3B1C7A215F00329359 /* 5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D0386F361C7A215F00329359 /* 5.jpg */; };
 		D05E89531C75D15600290E19 /* FoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05E89521C75D15600290E19 /* FoodViewController.swift */; };
+		D06D76241C805FC9004BFC8E /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06D76231C805FC9004BFC8E /* WebViewController.swift */; };
+		D06D76261C807E25004BFC8E /* memoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06D76251C807E25004BFC8E /* memoViewController.swift */; };
 		D08F7B861C79A2B100A62AED /* meatpotato.gif in Resources */ = {isa = PBXBuildFile; fileRef = D08F7B851C79A2B100A62AED /* meatpotato.gif */; };
 		D0A2216C1C759AAB006E2F2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A2216B1C759AAB006E2F2B /* AppDelegate.swift */; };
 		D0A2216E1C759AAB006E2F2B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A2216D1C759AAB006E2F2B /* ViewController.swift */; };
@@ -64,6 +66,8 @@
 		D0386F351C7A215F00329359 /* 4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4.jpg; sourceTree = "<group>"; };
 		D0386F361C7A215F00329359 /* 5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 5.jpg; sourceTree = "<group>"; };
 		D05E89521C75D15600290E19 /* FoodViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodViewController.swift; sourceTree = "<group>"; };
+		D06D76231C805FC9004BFC8E /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		D06D76251C807E25004BFC8E /* memoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = memoViewController.swift; sourceTree = "<group>"; };
 		D08F7B851C79A2B100A62AED /* meatpotato.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = meatpotato.gif; sourceTree = "<group>"; };
 		D0A221681C759AAB006E2F2B /* Cooking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cooking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0A2216B1C759AAB006E2F2B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -160,6 +164,8 @@
 				D0A221721C759AAB006E2F2B /* Assets.xcassets */,
 				D0A221741C759AAB006E2F2B /* LaunchScreen.storyboard */,
 				D0A221771C759AAB006E2F2B /* Info.plist */,
+				D06D76231C805FC9004BFC8E /* WebViewController.swift */,
+				D06D76251C807E25004BFC8E /* memoViewController.swift */,
 			);
 			path = Cooking;
 			sourceTree = "<group>";
@@ -388,10 +394,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0A2216E1C759AAB006E2F2B /* ViewController.swift in Sources */,
+				D06D76241C805FC9004BFC8E /* WebViewController.swift in Sources */,
 				D01B8E681C793E1D00A63E3E /* CookViewController.swift in Sources */,
 				D05E89531C75D15600290E19 /* FoodViewController.swift in Sources */,
 				D0BAA67C1C75DC9500346874 /* AllViewController.swift in Sources */,
 				D0A2216C1C759AAB006E2F2B /* AppDelegate.swift in Sources */,
+				D06D76261C807E25004BFC8E /* memoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

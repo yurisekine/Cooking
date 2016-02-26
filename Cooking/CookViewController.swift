@@ -11,12 +11,14 @@ import UIKit
 class CookViewController: UIViewController {
     
     @IBOutlet var foodContentsText: UILabel!
+    @IBOutlet var itemText: UILabel!
     @IBOutlet var foodContentsImage: UIImageView!
     @IBOutlet var processBar: UIProgressView!
 
     var number: Float = 1
     var foodTextArray: [String]!
     var foodImageArray: [UIImage]!
+    var itemTextArray: [String]!
 
     var foodnumber: Int?
     
@@ -38,6 +40,7 @@ class CookViewController: UIViewController {
 
         foodContentsText.text = foodTextArray[0]
         foodContentsImage.image = foodImageArray[0]
+        itemText.text = itemTextArray[0]
         
         
         processBar.transform = CGAffineTransformMakeScale(2.0, 3.0)
@@ -51,11 +54,45 @@ class CookViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
     func Egg() {
-        foodTextArray = ["",""]
-        foodImageArray = [UIImage(named: "1.jpg")!, UIImage(named: "2.jpg")!]
-
+        foodTextArray = [
+            "材料、用意するものは揃っているかな？",
+            "たまごを割って、軽く混ぜる",
+            "調味料をいれて混ぜる",
+            "油をひいて、強火にかける",
+            "卵液を箸で落としてみて、数秒で固まる温度になったら、 \n 火を少し弱めて、卵液を半分くらい流し込む",
+            "半熟になったらフライ返しで巻く",
+            "残りの卵液を流し込む",
+            "最後は弱火にして、卵液を流し込み、 \n　形を整える",
+            "切ってお皿に盛り付けて、完成！！"
+        ]
+        itemTextArray = [
+            "手を洗って準備しよう！",
+            "たまご、ボウル、はし",
+            "醤油、塩、だし、酒",
+            "油、フライパン",
+            "卵液",
+            "フライ返し",
+            "卵液",
+            "",
+            "お皿、ナイフ"
+        ]
+        foodImageArray = [
+            UIImage(named: "1.jpg")!,
+            UIImage(named: "2.jpg")!,
+            UIImage(named: "3.jpg")!,
+            UIImage(named: "4.jpg")!,
+            UIImage(named: "5.jpg")!,
+            UIImage(named: "1.jpg")!,
+            UIImage(named: "2.jpg")!,
+            UIImage(named: "3.jpg")!,
+            UIImage(named: "4.jpg")!
+        ]
+        
     }
+    
+    
     func MeatPotato() {
         
         foodTextArray = ["じゃがいもは皮をむき、一口大に切って、水にさらして水気を切る",
@@ -74,7 +111,8 @@ class CookViewController: UIViewController {
             UIImage(named: "5.jpg")!,
             UIImage(named: "1.jpg")!,
             UIImage(named: "2.jpg")!,
-            UIImage(named: "3.jpg")!
+            UIImage(named: "3.jpg")!,
+            UIImage(named: "4.jpg")!
         ]
         
     }
@@ -93,11 +131,13 @@ class CookViewController: UIViewController {
             number = number + 1
             foodContentsText.text = foodTextArray[Int(number - 1)]
             foodContentsImage.image = foodImageArray[Int(number - 1)]
+            itemText.text = itemTextArray[Int(number - 1)]
             processBar.setProgress(number / Float(foodTextArray.count) , animated: true)
         }else if number == Float(foodTextArray.count - 1) {
             number = number + 1
             foodContentsText.text = foodTextArray[Int(number - 1)]
             foodContentsImage.image = foodImageArray[Int(number - 1)]
+            itemText.text = itemTextArray[Int(number - 1)]
             processBar.setProgress(number / Float(foodTextArray.count) , animated: true)
         }
     }
@@ -107,6 +147,7 @@ class CookViewController: UIViewController {
             number = number - 1
             foodContentsText.text = foodTextArray[Int(number - 1)]
             foodContentsImage.image = foodImageArray[Int(number - 1)]
+            itemText.text = itemTextArray[Int(number - 1)]
             processBar.setProgress(number / Float(foodTextArray.count) , animated: true)
         }
     }

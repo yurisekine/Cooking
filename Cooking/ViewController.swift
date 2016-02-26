@@ -15,7 +15,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     var menuImageArray: [UIImage]!
     
     let menuArray = [
-        "卵焼き",
+        "玉子焼き",
         "肉じゃが",
         "ハンバーグ",
         "オムライス"

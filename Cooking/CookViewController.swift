@@ -153,6 +153,16 @@ class CookViewController: UIViewController {
     }
     
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let cookmemoViewController = segue.destinationViewController as! memoViewController
+       // let row = PickerView.selectedRowInComponent(0)
+        let row = self.number
+        cookmemoViewController.number = Int(row)  //menuPickerViewの番号
+    }
+    
+
+    
+    
 
     /*
     // MARK: - Navigation

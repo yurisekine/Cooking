@@ -268,7 +268,7 @@
 				TargetAttributes = {
 					D0A221671C759AAB006E2F2B = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = DYQ5RU68TK;
+						DevelopmentTeam = 393T7VJW2G;
 					};
 					D0A2217B1C759AAB006E2F2B = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -540,6 +540,7 @@
 			baseConfigurationReference = 6FCA24F379F86F82F2A3F7B9 /* Pods-Cooking.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Cooking/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sekine.Cooking;
@@ -552,6 +553,7 @@
 			baseConfigurationReference = 2EA3CA0C062E41B482DA3871 /* Pods-Cooking.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Cooking/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sekine.Cooking;

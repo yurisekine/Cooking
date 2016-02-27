@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -219,7 +220,7 @@
                     <navigationItem key="navigationItem" id="pef-a7-CkR">
                         <barButtonItem key="rightBarButtonItem" title="memo" id="Kjm-SK-G4j">
                             <connections>
-                                <segue destination="RUw-vT-1Qq" kind="push" id="A31-2S-bp8"/>
+                                <segue destination="RUw-vT-1Qq" kind="push" identifier="memo" id="A31-2S-bp8"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -257,11 +258,18 @@
                         <color key="backgroundColor" red="0.78888536053174851" green="0.63106822169493182" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="2hm-xO-8oi">
-                        <barButtonItem key="rightBarButtonItem" title="決定" id="B3u-au-gdY">
-                            <connections>
-                                <action selector="memoDoneButton" destination="RUw-vT-1Qq" id="SGg-Mw-InZ"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem title="決定" id="B3u-au-gdY">
+                                <connections>
+                                    <action selector="memoDoneButton" destination="RUw-vT-1Qq" id="SGg-Mw-InZ"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Reset" id="euR-jh-geb">
+                                <connections>
+                                    <action selector="resetButton" destination="RUw-vT-1Qq" id="RNG-JK-zZf"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
@@ -342,7 +350,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hd5-qW-Aug" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1695.5" y="14.5"/>
+            <point key="canvasLocation" x="1741.5" y="-51.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="toT-aR-ldl">

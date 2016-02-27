@@ -23,6 +23,8 @@
 		D06D76241C805FC9004BFC8E /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06D76231C805FC9004BFC8E /* WebViewController.swift */; };
 		D06D76261C807E25004BFC8E /* memoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06D76251C807E25004BFC8E /* memoViewController.swift */; };
 		D08F7B861C79A2B100A62AED /* meatpotato.gif in Resources */ = {isa = PBXBuildFile; fileRef = D08F7B851C79A2B100A62AED /* meatpotato.gif */; };
+		D09786361C8206CC00E60E18 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09786351C8206CC00E60E18 /* HistoryViewController.swift */; };
+		D09786381C82087300E60E18 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09786371C82087300E60E18 /* RegisterViewController.swift */; };
 		D0A2216C1C759AAB006E2F2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A2216B1C759AAB006E2F2B /* AppDelegate.swift */; };
 		D0A2216E1C759AAB006E2F2B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A2216D1C759AAB006E2F2B /* ViewController.swift */; };
 		D0A221711C759AAB006E2F2B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0A2216F1C759AAB006E2F2B /* Main.storyboard */; };
@@ -69,6 +71,8 @@
 		D06D76231C805FC9004BFC8E /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		D06D76251C807E25004BFC8E /* memoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = memoViewController.swift; sourceTree = "<group>"; };
 		D08F7B851C79A2B100A62AED /* meatpotato.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = meatpotato.gif; sourceTree = "<group>"; };
+		D09786351C8206CC00E60E18 /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		D09786371C82087300E60E18 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		D0A221681C759AAB006E2F2B /* Cooking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cooking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0A2216B1C759AAB006E2F2B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0A2216D1C759AAB006E2F2B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -166,6 +170,8 @@
 				D0A221771C759AAB006E2F2B /* Info.plist */,
 				D06D76231C805FC9004BFC8E /* WebViewController.swift */,
 				D06D76251C807E25004BFC8E /* memoViewController.swift */,
+				D09786351C8206CC00E60E18 /* HistoryViewController.swift */,
+				D09786371C82087300E60E18 /* RegisterViewController.swift */,
 			);
 			path = Cooking;
 			sourceTree = "<group>";
@@ -268,7 +274,7 @@
 				TargetAttributes = {
 					D0A221671C759AAB006E2F2B = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = 393T7VJW2G;
+						DevelopmentTeam = DYQ5RU68TK;
 					};
 					D0A2217B1C759AAB006E2F2B = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -393,6 +399,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D09786381C82087300E60E18 /* RegisterViewController.swift in Sources */,
 				D0A2216E1C759AAB006E2F2B /* ViewController.swift in Sources */,
 				D06D76241C805FC9004BFC8E /* WebViewController.swift in Sources */,
 				D01B8E681C793E1D00A63E3E /* CookViewController.swift in Sources */,
@@ -400,6 +407,7 @@
 				D0BAA67C1C75DC9500346874 /* AllViewController.swift in Sources */,
 				D0A2216C1C759AAB006E2F2B /* AppDelegate.swift in Sources */,
 				D06D76261C807E25004BFC8E /* memoViewController.swift in Sources */,
+				D09786361C8206CC00E60E18 /* HistoryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -65,15 +65,15 @@ class memoViewController: UIViewController {
         //本当にするのか確認のアラート
         let alert = UIAlertController(title: "警告", message: "本当に削除していいですか？", preferredStyle: .Alert)
         
-        let handlerResult: UIAlertAction -> Void = {
-            switch $0.title! {
-            case "削除": self.saveData.removeObjectForKey("memo")
-            default: break
-            }
+        let cancelAction = UIAlertAction(title: "cancel", style: .Cancel, handler:nil)
+        let removeAction = UIAlertAction(title: "削除", style: .Default) {
+            action in
+            //削除
+            self.saveData.removeObjectForKey("memo")
         }
         
-        alert.addAction(UIAlertAction(title: "cancel", style: .Cancel, handler: nil))
-        alert.addAction(UIAlertAction(title: "削除", style: .Default, handler: handlerResult))
+        alert.addAction(cancelAction)
+        alert.addAction(removeAction)
         presentViewController(alert, animated: true, completion: nil)
 
 

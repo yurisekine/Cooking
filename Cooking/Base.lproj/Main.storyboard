@@ -30,21 +30,32 @@
                                 <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NT8-K1-Hne">
+                                <rect key="frame" x="0.0" y="264" width="375" height="167"/>
+                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bqw-rn-uqC">
+                                <rect key="frame" x="202" y="571" width="129" height="57"/>
+                                <color key="backgroundColor" red="0.95295589589960106" green="1" blue="0.98080702805628883" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="履歴">
+                                    <color key="titleColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="ysz-LR-DcL" kind="push" identifier="history" id="0RE-Ha-jTT"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3o3-EE-GQF">
-                                <rect key="frame" x="132" y="562" width="111" height="45"/>
+                                <rect key="frame" x="40" y="467" width="111" height="45"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <state key="normal" title="決定">
                                     <color key="titleColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="W8Y-Kc-MfJ" kind="show" id="Ukn-8v-Tvl"/>
+                                    <segue destination="W8Y-Kc-MfJ" kind="show" identifier="food" id="Ukn-8v-Tvl"/>
                                 </connections>
                             </button>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NT8-K1-Hne">
-                                <rect key="frame" x="0.0" y="359" width="375" height="167"/>
-                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
-                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" red="0.72156862745098038" green="0.61568627450980395" blue="0.49803921568627452" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -57,6 +68,134 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="725.5" y="321.5"/>
+        </scene>
+        <!--History View Controller-->
+        <scene sceneID="rDP-hx-kqo">
+            <objects>
+                <viewController id="ysz-LR-DcL" customClass="HistoryViewController" customModule="Cooking" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hQt-ZZ-mcr"/>
+                        <viewControllerLayoutGuide type="bottom" id="yji-xl-BtY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="edp-uG-Hzx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A3R-A0-4NN">
+                                <rect key="frame" x="172" y="477" width="30" height="30"/>
+                                <state key="normal" title="見る"/>
+                                <connections>
+                                    <segue destination="ieA-5a-vsp" kind="push" id="alr-IW-lZz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J4M-z2-Wu0">
+                                <rect key="frame" x="172" y="234" width="30" height="30"/>
+                                <state key="normal" title="登録"/>
+                                <connections>
+                                    <segue destination="OW8-H6-MnD" kind="push" id="0ma-aI-S3I"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="s9j-TN-uNn"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U8f-Js-cev" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="725.5" y="1286.5"/>
+        </scene>
+        <!--Register View Controller-->
+        <scene sceneID="tnW-yv-o2V">
+            <objects>
+                <viewController id="OW8-H6-MnD" customClass="RegisterViewController" customModule="Cooking" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vUG-zO-VPg"/>
+                        <viewControllerLayoutGuide type="bottom" id="EeY-eR-B3X"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="T8H-x4-65o">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="料理名：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hal-26-qxb">
+                                <rect key="frame" x="31" y="105" width="68" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dpX-AS-3Qw">
+                                <rect key="frame" x="156" y="101" width="203" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="メモ" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="wqC-TV-bqx">
+                                <rect key="frame" x="67" y="489" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zXZ-TP-GYD">
+                                <rect key="frame" x="155" y="615" width="62" height="44"/>
+                                <state key="normal" title="登録"/>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8iS-SD-2m8">
+                                <rect key="frame" x="66" y="273" width="241" height="209"/>
+                            </imageView>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="yFb-hN-zPB">
+                                <rect key="frame" x="0.0" y="139" width="375" height="126"/>
+                                <date key="date" timeIntervalSinceReferenceDate="478289471.43266797">
+                                    <!--2016-02-27 18:11:11 +0000-->
+                                </date>
+                                <date key="minimumDate" timeIntervalSinceReferenceDate="441802800">
+                                    <!--2015-01-01 11:00:00 +0000-->
+                                </date>
+                                <date key="maximumDate" timeIntervalSinceReferenceDate="946638000">
+                                    <!--2030-12-31 11:00:00 +0000-->
+                                </date>
+                                <locale key="locale" localeIdentifier="ja_JP"/>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zg2-G2-8MX">
+                                <rect key="frame" x="67" y="270" width="241" height="215"/>
+                                <state key="normal" title="タップして、画像を取得できます"/>
+                                <connections>
+                                    <action selector="selectButton:" destination="OW8-H6-MnD" eventType="touchUpInside" id="urK-Au-QSj"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.43529412150000002" blue="0.81176471709999998" alpha="0.52508081896551728" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="6Kv-TP-Vfw"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="datePicker" destination="yFb-hN-zPB" id="URM-r9-S7G"/>
+                        <outlet property="memoView" destination="wqC-TV-bqx" id="rZF-hu-sba"/>
+                        <outlet property="nameField" destination="dpX-AS-3Qw" id="40P-tv-ZYh"/>
+                        <outlet property="photoImageView" destination="8iS-SD-2m8" id="rru-jR-ijf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PkG-BE-pEg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1221.5" y="1286.5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="5Os-Oz-hJ0">
+            <objects>
+                <viewController id="ieA-5a-vsp" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vJl-va-9Ec"/>
+                        <viewControllerLayoutGuide type="bottom" id="oyE-D2-0Lw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SCw-QC-Teq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="j6O-6w-UIp"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rww-Qh-KQ4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1221.5" y="2129.5"/>
         </scene>
         <!--Food View Controller-->
         <scene sceneID="NS4-2Z-CRu">
@@ -71,29 +210,29 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g26-7C-pud">
-                                <rect key="frame" x="62" y="507" width="250" height="50"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="0.0" y="481" width="186" height="186"/>
+                                <color key="backgroundColor" red="0.60392156862745094" green="0.49019607843137253" blue="0.29803921568627451" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="作り方一覧">
-                                    <color key="titleColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.29803921568627451" green="0.14509803921568629" blue="0.074509803921568626" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="n9Q-ST-yJu" kind="show" identifier="all" id="xxx-uh-WJI"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S1C-V2-a0C">
-                                <rect key="frame" x="62" y="565" width="250" height="50"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="189" y="557" width="186" height="110"/>
+                                <color key="backgroundColor" red="0.50196078431372548" green="0.37254901960784315" blue="0.20784313725490197" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="つくる">
-                                    <color key="titleColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.28627450980392155" green="0.13725490196078433" blue="0.070588235294117646" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="qvV-OD-Afk" kind="push" identifier="cook" id="mMt-Vp-TLR"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P8A-lh-Voo">
-                                <rect key="frame" x="36" y="225" width="303" height="267"/>
+                                <rect key="frame" x="0.0" y="177" width="375" height="376"/>
                             </imageView>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e58-PT-3vK">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -102,19 +241,21 @@
                                 </items>
                             </navigationBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="時間" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kik-py-sgE">
-                                <rect key="frame" x="134" y="171" width="205" height="33"/>
+                                <rect key="frame" x="189" y="64" width="186" height="110"/>
+                                <color key="backgroundColor" red="0.73725490196078436" green="0.66274509803921566" blue="0.44705882352941179" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.30196078431372547" green="0.14509803921568629" blue="0.074509803921568626" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="料理名" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xjE-p6-cxq">
-                                <rect key="frame" x="15" y="72" width="344" height="97"/>
+                                <rect key="frame" x="0.0" y="64" width="186" height="110"/>
+                                <color key="backgroundColor" red="0.94509803921568625" green="0.95294117647058818" blue="0.73725490196078436" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.29803921568627451" green="0.14509803921568629" blue="0.074509803921568626" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.72156862745098038" green="0.61568627450980395" blue="0.49803921568627452" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="5Ot-Rg-ht8"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
@@ -335,8 +476,7 @@
                         <color key="backgroundColor" red="0.72156862745098038" green="0.61568627450980395" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
                     </scrollView>
                     <toolbarItems>
-                        <barButtonItem title="Item" id="2b9-0j-mcT"/>
-                        <barButtonItem title="Item" id="Jf9-v3-p8l"/>
+                        <barButtonItem id="Jf9-v3-p8l"/>
                     </toolbarItems>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
@@ -350,7 +490,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hd5-qW-Aug" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1741.5" y="-51.5"/>
+            <point key="canvasLocation" x="1695.5" y="-45.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="toT-aR-ldl">

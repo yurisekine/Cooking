@@ -59,12 +59,26 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
 
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let foodViewController = segue.destinationViewController as! FoodViewController
+        
         let row = menuPickerView.selectedRowInComponent(0)
-        foodViewController.nameText = menuArray[row]   //料理名
-        foodViewController.foodimage = menuImageArray[row]  //料理の画像
-        foodViewController.number = row  //menuPickerViewの番号
+        
+        if segue.identifier == "food" {
+            let foodViewController = segue.destinationViewController as! FoodViewController
+            foodViewController.nameText = menuArray[row]   //料理名
+            foodViewController.foodimage = menuImageArray[row]  //料理の画像
+            foodViewController.number = row  //menuPickerViewの番号
+        } else if segue.identifier == "history" {
+            let historyViewController = segue.destinationViewController as! HistoryViewController
+            historyViewController.foodname = menuArray[row]
+        }
     }
+    
+    
+
+    
+    
+    
+    
     
 }
 

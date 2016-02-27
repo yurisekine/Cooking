@@ -6,17 +6,15 @@
 //  Copyright © 2016年 SEKINE YURI. All rights reserved.
 //
 
-//import Cocoa
 import UIKit
 
 class memoViewController: UIViewController {
 
     //メモ入力用のテキストビュー
     @IBOutlet var memoTextView: UITextView!
-    
     //メモ用の配列を用意
     var TextViewArray: [String] = []
-    //配列の番号num
+    //配列の番号number(cookから)
     var number: Int!
     
     let saveData: NSUserDefaults = NSUserDefaults.standardUserDefaults()
@@ -42,7 +40,7 @@ class memoViewController: UIViewController {
             
         } else {
             //初期値
-            TextViewArray = [" ●ワンポイントアドバイス● \n あああ　\n ●オリジナルでメモしよう●　","2","3","4","5","6","7","8","9"]
+            TextViewArray = [" ●ワンポイントアドバイス● \n 手洗い大事！　\n ●オリジナルでメモしよう●　","2","3","4","5","6","7","8","9"]
             memoTextView.text = TextViewArray[number - 1]
         }
  
@@ -77,15 +75,7 @@ class memoViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "cancel", style: .Cancel, handler: nil))
         alert.addAction(UIAlertAction(title: "削除", style: .Default, handler: handlerResult))
         presentViewController(alert, animated: true, completion: nil)
-        
-        
-        /*    let removeAction = UIAlertAction(title: "削除", style: .Default) {
-            //saveData.removeObjectForKey("memo")
-        }
-        let cancelAction = UIAlertAction(title: "cancel", style: .Cancel) {
-            
-        }
-        */
+
 
     }
     

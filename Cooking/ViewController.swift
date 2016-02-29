@@ -40,6 +40,11 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         // Dispose of any resources that can be recreated.
     }
     
+    
+    @IBAction func back (segue: UIStoryboardSegue) {
+        
+    }
+    
     //picker view
     //列の数
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {

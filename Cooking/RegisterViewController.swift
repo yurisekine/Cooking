@@ -10,10 +10,14 @@ import UIKit
 
 class RegisterViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate  {
     
+   // @IBOutlet var titleTextField: UITextField!
     var foodname: String?
     
+    var titleArray: [AnyObject] = []
+    let saveData = NSUserDefaults.standardUserDefaults()
+    
     //題名入力用TextField
-    @IBOutlet var nameField: UITextField!
+    @IBOutlet var nameTextField: UITextField!
     //写真表示用ImageView
     @IBOutlet weak var photoImageView: UIImageView!
     //メモ用TextView
@@ -25,7 +29,11 @@ class RegisterViewController: UIViewController, UINavigationControllerDelegate, 
     override func viewDidLoad() {
         super.viewDidLoad()
         //ViewControllerで選択された料理名をテキストフィールドに元から表示
-        nameField.text = foodname
+        nameTextField.text = foodname
+        
+        if saveData.arrayForKey("TITLE") != nil {
+            titleArray = saveData.arrayForKey("TITLE")!
+        }
     }
     
     //カメラ、アルバムの呼び出しメソッド(カメラorアルバムのソースタイプが引数)
@@ -82,6 +90,44 @@ class RegisterViewController: UIViewController, UINavigationControllerDelegate, 
         
         //アラートを表示
         presentViewController(alertController, animated: true, completion: nil)
+    }
+    
+    @IBAction func save() {
+        let titleDictionary = ["title": nameTextField.text!] //!なしだとString?型、!をつけてString型に
+        
+        if nameTextField.text == "" {
+            let alert = UIAlertController(
+                title: "保存失敗",
+                message: "テキスト入力欄に入力してください",
+                preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(
+                UIAlertAction(
+                    title: "OK",
+                    style: UIAlertActionStyle.Default,
+                    handler: nil
+                )
+            )
+            self.presentViewController(alert, animated: true, completion: nil)
+            
+        } else {
+            
+            titleArray.append(titleDictionary)
+            saveData.setObject(titleArray, forKey: "TITLE")
+            
+            let alert = UIAlertController(
+                title: "保存完了",
+                message: "登録が完了しました",
+                preferredStyle:  UIAlertControllerStyle.Alert)
+            alert.addAction(
+                UIAlertAction(
+                    title: "OK",
+                    style: UIAlertActionStyle.Default,
+                    handler: nil
+                )
+            )
+            self.presentViewController(alert, animated: true, completion: nil)
+            nameTextField.text = ""
+        }
     }
     
     

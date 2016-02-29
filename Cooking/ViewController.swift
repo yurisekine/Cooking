@@ -71,6 +71,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             foodViewController.nameText = menuArray[row] //料理名
             foodViewController.foodimage = menuImageArray[row] //料理名
             foodViewController.number = row //menuPickerViewの番号
+        } else {
+            
         }
     }
 

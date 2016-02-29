@@ -11,7 +11,7 @@ import UIKit
 class ListTableViewCell: UITableViewCell {
     
     @IBOutlet var titleLabel: UILabel!
-//    @IBOutlet var iconLabel: UIImageView!
+    @IBOutlet var iconImage: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

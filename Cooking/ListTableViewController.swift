@@ -13,12 +13,13 @@ class ListTableViewController: UITableViewController {
     
     
 //    var foodname: String?
-//    var iconimageView: UIImageView?
+//    var iconimageView: UIImageView?//
     
     
     var titleArray: [AnyObject] = []
-//    var iconArray: [AnyObject] = []
+//    var iconArray: [AnyObject] = []//
     let saveData = NSUserDefaults.standardUserDefaults()
+    let iconData = NSUserDefaults.standardUserDefaults()//
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,9 +29,9 @@ class ListTableViewController: UITableViewController {
     }
     
     override func viewWillAppear(animated: Bool) {
-        if saveData.arrayForKey("TITLE") != nil {
+        if saveData.arrayForKey("TITLE") != nil/* && iconData.arrayForKey("ICON") != nil*/{
             titleArray = saveData.arrayForKey("TITLE")!
-//            iconArray = saveData.arrayForKey("TITLE")!
+//            iconArray = iconData.arrayForKey("ICON")!//
         }
         tableView.reloadData()
     }
@@ -39,8 +40,7 @@ class ListTableViewController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    // MARK: - Table view data source
+
     
     //セクションの数を設定
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -57,7 +57,10 @@ class ListTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! ListTableViewCell
         let nowIndexPathDictionary: (AnyObject) = titleArray[indexPath.row]
+//        let iconIndexPathDictionary: (AnyObject) = iconArray[indexPath.row]//
         cell.titleLabel.text = nowIndexPathDictionary["title"] as? String
+        //
+//        cell.iconImage.image = iconIndexPathDictionary["icon"] as? UIImage
         
         //偶数列の色を変える
         if indexPath.row % 2 == 1 {
@@ -76,10 +79,10 @@ class ListTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == UITableViewCellEditingStyle.Delete {
             titleArray.removeAtIndex(indexPath.row)
-//            iconArray.removeAtIndex(indexPath.row)
+//            iconArray.removeAtIndex(indexPath.row)//
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
             saveData.setObject(titleArray, forKey: "TITLE")
-//            saveData.setObject(iconArray, forKey: "TITLE")
+//            iconData.setObject(iconArray, forKey: "ICON")//
            
             
         }

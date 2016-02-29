@@ -15,14 +15,18 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nma-ix-1qd">
-                        <rect key="frame" x="56" y="17" width="209" height="56"/>
+                        <rect key="frame" x="107" y="17" width="209" height="56"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yMi-I9-KA1">
+                        <rect key="frame" x="8" y="0.0" width="90" height="89"/>
+                    </imageView>
                 </subviews>
             </tableViewCellContentView>
             <connections>
+                <outlet property="iconImage" destination="yMi-I9-KA1" id="5wd-G5-T8J"/>
                 <outlet property="titleLabel" destination="Nma-ix-1qd" id="TZR-qY-O6a"/>
             </connections>
             <point key="canvasLocation" x="361" y="170"/>

@@ -23,7 +23,6 @@
 		D06D76241C805FC9004BFC8E /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06D76231C805FC9004BFC8E /* WebViewController.swift */; };
 		D06D76261C807E25004BFC8E /* memoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06D76251C807E25004BFC8E /* memoViewController.swift */; };
 		D08F7B861C79A2B100A62AED /* meatpotato.gif in Resources */ = {isa = PBXBuildFile; fileRef = D08F7B851C79A2B100A62AED /* meatpotato.gif */; };
-		D09786361C8206CC00E60E18 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09786351C8206CC00E60E18 /* HistoryViewController.swift */; };
 		D09786381C82087300E60E18 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09786371C82087300E60E18 /* RegisterViewController.swift */; };
 		D097863E1C83E54900E60E18 /* memo.gif in Resources */ = {isa = PBXBuildFile; fileRef = D097863D1C83E54900E60E18 /* memo.gif */; };
 		D09786401C8435EE00E60E18 /* cook.gif in Resources */ = {isa = PBXBuildFile; fileRef = D097863F1C8435EE00E60E18 /* cook.gif */; };
@@ -82,7 +81,6 @@
 		D06D76231C805FC9004BFC8E /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		D06D76251C807E25004BFC8E /* memoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = memoViewController.swift; sourceTree = "<group>"; };
 		D08F7B851C79A2B100A62AED /* meatpotato.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = meatpotato.gif; sourceTree = "<group>"; };
-		D09786351C8206CC00E60E18 /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		D09786371C82087300E60E18 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		D097863D1C83E54900E60E18 /* memo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = memo.gif; sourceTree = "<group>"; };
 		D097863F1C8435EE00E60E18 /* cook.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = cook.gif; sourceTree = "<group>"; };
@@ -200,7 +198,6 @@
 				D0A221771C759AAB006E2F2B /* Info.plist */,
 				D06D76231C805FC9004BFC8E /* WebViewController.swift */,
 				D06D76251C807E25004BFC8E /* memoViewController.swift */,
-				D09786351C8206CC00E60E18 /* HistoryViewController.swift */,
 				D09786371C82087300E60E18 /* RegisterViewController.swift */,
 				D097864F1C847D9200E60E18 /* ListTableViewController.swift */,
 				D09792D41C847F2E00E60E18 /* ListTableViewCell.swift */,
@@ -451,7 +448,6 @@
 				D0BAA67C1C75DC9500346874 /* AllViewController.swift in Sources */,
 				D0A2216C1C759AAB006E2F2B /* AppDelegate.swift in Sources */,
 				D06D76261C807E25004BFC8E /* memoViewController.swift in Sources */,
-				D09786361C8206CC00E60E18 /* HistoryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

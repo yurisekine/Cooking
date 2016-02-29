@@ -40,7 +40,6 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         // Dispose of any resources that can be recreated.
     }
     
-    
     @IBAction func back (segue: UIStoryboardSegue) {
         
     }
@@ -61,7 +60,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
         return menuArray[row]
     }
-
+    
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
@@ -69,21 +68,14 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         
         if segue.identifier == "food" {
             let foodViewController = segue.destinationViewController as! FoodViewController
-            foodViewController.nameText = menuArray[row]   //料理名
-            foodViewController.foodimage = menuImageArray[row]  //料理の画像
-            foodViewController.number = row  //menuPickerViewの番号
-        } else if segue.identifier == "history" {
-            let historyViewController = segue.destinationViewController as! HistoryViewController
-            historyViewController.foodname = menuArray[row]
+            foodViewController.nameText = menuArray[row] //料理名
+            foodViewController.foodimage = menuImageArray[row] //料理名
+            foodViewController.number = row //menuPickerViewの番号
         }
     }
-    
-    
 
-    
-    
-    
-    
-    
+            /*   } else if segue.identifier == "history" {
+            let listTableViewController = segue.destinationViewController as! ListTableViewController
+            listTableViewController.foodname = menuArray[row]
+            }*/
 }
-

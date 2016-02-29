@@ -14,6 +14,9 @@ class RegisterViewController: UIViewController, UINavigationControllerDelegate, 
     var foodname: String?
     
     var titleArray: [AnyObject] = []
+  /*  var iconArray: [AnyObject] = []
+    var memoArray: [AnyObject] = []
+    var dateArray: [AnyObject] = []*/
     let saveData = NSUserDefaults.standardUserDefaults()
     
     //題名入力用TextField
@@ -29,10 +32,13 @@ class RegisterViewController: UIViewController, UINavigationControllerDelegate, 
     override func viewDidLoad() {
         super.viewDidLoad()
         //ViewControllerで選択された料理名をテキストフィールドに元から表示
-        nameTextField.text = foodname
+//        nameTextField.text = foodname
         
         if saveData.arrayForKey("TITLE") != nil {
             titleArray = saveData.arrayForKey("TITLE")!
+        /*    iconArray = saveData.arrayForKey("TITLE")!
+            memoArray = saveData.arrayForKey("TITLE")!
+            dateArray = saveData.arrayForKey("TITLE")!*/
         }
     }
     
@@ -93,12 +99,19 @@ class RegisterViewController: UIViewController, UINavigationControllerDelegate, 
     }
     
     @IBAction func save() {
+        
+//        let date = datePicker.date
+//         = NSDateFormatter.localizedStringFromDate(date, dateStyle: NSDateFormatterStyle.LongStyle)
+        
         let titleDictionary = ["title": nameTextField.text!] //!なしだとString?型、!をつけてString型に
+     /*   let image = ["image": photoImageView.image!]
+        let date = ["date": datePicker.date]
+        let memo = ["memo": memoView.text!]*/
         
         if nameTextField.text == "" {
             let alert = UIAlertController(
                 title: "保存失敗",
-                message: "テキスト入力欄に入力してください",
+                message: "料理名、または画像が未入力です",
                 preferredStyle: UIAlertControllerStyle.Alert)
             alert.addAction(
                 UIAlertAction(
@@ -112,6 +125,9 @@ class RegisterViewController: UIViewController, UINavigationControllerDelegate, 
         } else {
             
             titleArray.append(titleDictionary)
+      /*      iconArray.append(image)
+            memoArray.append(memo)
+            dateArray.append(date)*/
             saveData.setObject(titleArray, forKey: "TITLE")
             
             let alert = UIAlertController(
@@ -127,6 +143,10 @@ class RegisterViewController: UIViewController, UINavigationControllerDelegate, 
             )
             self.presentViewController(alert, animated: true, completion: nil)
             nameTextField.text = ""
+     /*       photoImageView.image = nil
+            memoView.text = ""*/
+            
+        
         }
     }
     

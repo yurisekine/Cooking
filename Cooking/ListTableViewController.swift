@@ -12,7 +12,12 @@ import UIKit
 class ListTableViewController: UITableViewController {
     
     
+//    var foodname: String?
+//    var iconimageView: UIImageView?
+    
+    
     var titleArray: [AnyObject] = []
+//    var iconArray: [AnyObject] = []
     let saveData = NSUserDefaults.standardUserDefaults()
     
     override func viewDidLoad() {
@@ -20,16 +25,12 @@ class ListTableViewController: UITableViewController {
         
         tableView.registerNib(UINib(nibName: "ListTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
         
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-        
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
     
     override func viewWillAppear(animated: Bool) {
         if saveData.arrayForKey("TITLE") != nil {
             titleArray = saveData.arrayForKey("TITLE")!
+//            iconArray = saveData.arrayForKey("TITLE")!
         }
         tableView.reloadData()
     }
@@ -47,7 +48,7 @@ class ListTableViewController: UITableViewController {
         return 1
     }
     
-    //セルの個数を指定します
+    //セルの個数を指定
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return titleArray.count
@@ -55,13 +56,32 @@ class ListTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! ListTableViewCell
-        
         let nowIndexPathDictionary: (AnyObject) = titleArray[indexPath.row]
-        
         cell.titleLabel.text = nowIndexPathDictionary["title"] as? String
+        
+        //偶数列の色を変える
+        if indexPath.row % 2 == 1 {
+            cell.backgroundColor = UIColor.brownColor()
+        }
         
         return cell
     }
+    
+    
+    //削除
+    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath ) -> Bool {
+        return true
+    }
 
-
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == UITableViewCellEditingStyle.Delete {
+            titleArray.removeAtIndex(indexPath.row)
+//            iconArray.removeAtIndex(indexPath.row)
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
+            saveData.setObject(titleArray, forKey: "TITLE")
+//            saveData.setObject(iconArray, forKey: "TITLE")
+           
+            
+        }
+    }
 }

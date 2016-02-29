@@ -45,7 +45,6 @@ class FoodViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         let row = number
@@ -64,17 +63,6 @@ class FoodViewController: UIViewController {
             //
         }
     }
-    
-    
-
-   /*
-    //前の画面に戻る
-    @IBAction func clickBack(sender: ViewController) {
-        self.navigationController?.popViewControllerAnimated(true)
-    }
-*/
-    
-    
 
     /*
     // MARK: - Navigation

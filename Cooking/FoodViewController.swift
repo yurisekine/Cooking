@@ -29,11 +29,11 @@ class FoodViewController: UIViewController {
         if number == 0 {
             timeLabel.text = "所要時間　10分"
         } else if number == 1 {
-            timeLabel.text = ""
+            timeLabel.text = "所要時間　20分"
         } else if number == 2 {
-            timeLabel.text = ""
+            timeLabel.text = "所要時間　30分"
         } else if number == 3 {
-            timeLabel.text = ""
+            timeLabel.text = "所要時間　40分"
         } else {
         
         }

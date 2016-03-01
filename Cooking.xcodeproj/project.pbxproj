@@ -35,6 +35,11 @@
 		D09786501C847D9200E60E18 /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D097864F1C847D9200E60E18 /* ListTableViewController.swift */; };
 		D09792D61C847F2E00E60E18 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09792D41C847F2E00E60E18 /* ListTableViewCell.swift */; };
 		D09792D71C847F2E00E60E18 /* ListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D09792D51C847F2E00E60E18 /* ListTableViewCell.xib */; };
+		D09792D91C84F17600E60E18 /* folk.gif in Resources */ = {isa = PBXBuildFile; fileRef = D09792D81C84F17600E60E18 /* folk.gif */; };
+		D09792DB1C84F46C00E60E18 /* person.gif in Resources */ = {isa = PBXBuildFile; fileRef = D09792DA1C84F46C00E60E18 /* person.gif */; };
+		D09792DD1C85413100E60E18 /* spfolk.gif in Resources */ = {isa = PBXBuildFile; fileRef = D09792DC1C85413100E60E18 /* spfolk.gif */; };
+		D09792DF1C855A2800E60E18 /* bawl.gif in Resources */ = {isa = PBXBuildFile; fileRef = D09792DE1C855A2800E60E18 /* bawl.gif */; };
+		D097968F1C855BB900E60E18 /* fry.gif in Resources */ = {isa = PBXBuildFile; fileRef = D097968E1C855BB900E60E18 /* fry.gif */; };
 		D0A2216C1C759AAB006E2F2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A2216B1C759AAB006E2F2B /* AppDelegate.swift */; };
 		D0A2216E1C759AAB006E2F2B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A2216D1C759AAB006E2F2B /* ViewController.swift */; };
 		D0A221711C759AAB006E2F2B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0A2216F1C759AAB006E2F2B /* Main.storyboard */; };
@@ -93,6 +98,11 @@
 		D097864F1C847D9200E60E18 /* ListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTableViewController.swift; sourceTree = "<group>"; };
 		D09792D41C847F2E00E60E18 /* ListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
 		D09792D51C847F2E00E60E18 /* ListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListTableViewCell.xib; sourceTree = "<group>"; };
+		D09792D81C84F17600E60E18 /* folk.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = folk.gif; sourceTree = "<group>"; };
+		D09792DA1C84F46C00E60E18 /* person.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = person.gif; sourceTree = "<group>"; };
+		D09792DC1C85413100E60E18 /* spfolk.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = spfolk.gif; sourceTree = "<group>"; };
+		D09792DE1C855A2800E60E18 /* bawl.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = bawl.gif; sourceTree = "<group>"; };
+		D097968E1C855BB900E60E18 /* fry.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = fry.gif; sourceTree = "<group>"; };
 		D0A221681C759AAB006E2F2B /* Cooking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cooking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0A2216B1C759AAB006E2F2B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0A2216D1C759AAB006E2F2B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -168,6 +178,11 @@
 		D0A2216A1C759AAB006E2F2B /* Cooking */ = {
 			isa = PBXGroup;
 			children = (
+				D097968E1C855BB900E60E18 /* fry.gif */,
+				D09792DE1C855A2800E60E18 /* bawl.gif */,
+				D09792DC1C85413100E60E18 /* spfolk.gif */,
+				D09792DA1C84F46C00E60E18 /* person.gif */,
+				D09792D81C84F17600E60E18 /* folk.gif */,
 				D097864D1C84743800E60E18 /* book.gif */,
 				D097864A1C84711700E60E18 /* owan.gif */,
 				D09786451C845A0000E60E18 /* sandtimer.gif */,
@@ -347,6 +362,8 @@
 				D0386F391C7A215F00329359 /* 3.jpg in Resources */,
 				D09786481C845A0000E60E18 /* timer.gif in Resources */,
 				D0386F2D1C79FF7800329359 /* han.gif in Resources */,
+				D097968F1C855BB900E60E18 /* fry.gif in Resources */,
+				D09792DB1C84F46C00E60E18 /* person.gif in Resources */,
 				D08F7B861C79A2B100A62AED /* meatpotato.gif in Resources */,
 				D097864E1C84743800E60E18 /* book.gif in Resources */,
 				D09786431C84434100E60E18 /* next.gif in Resources */,
@@ -357,8 +374,11 @@
 				D0A221761C759AAB006E2F2B /* LaunchScreen.storyboard in Resources */,
 				D09792D71C847F2E00E60E18 /* ListTableViewCell.xib in Resources */,
 				D097863E1C83E54900E60E18 /* memo.gif in Resources */,
+				D09792DD1C85413100E60E18 /* spfolk.gif in Resources */,
+				D09792DF1C855A2800E60E18 /* bawl.gif in Resources */,
 				D09786401C8435EE00E60E18 /* cook.gif in Resources */,
 				D0A221731C759AAB006E2F2B /* Assets.xcassets in Resources */,
+				D09792D91C84F17600E60E18 /* folk.gif in Resources */,
 				D0386F3B1C7A215F00329359 /* 5.jpg in Resources */,
 				D0386F2F1C7A176B00329359 /* zai.gif in Resources */,
 				D0A221711C759AAB006E2F2B /* Main.storyboard in Resources */,
@@ -590,6 +610,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Cooking/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sekine.Cooking;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -603,6 +624,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Cooking/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sekine.Cooking;
 				PRODUCT_NAME = "$(TARGET_NAME)";

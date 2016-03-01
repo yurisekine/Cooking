@@ -7,8 +7,10 @@
 //
 
 import UIKit
+//import Realm
 
-class RegisterViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate  {
+
+class RegisterViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextFieldDelegate, UITextViewDelegate{
     
    // @IBOutlet var titleTextField: UITextField!
     var foodname: String?
@@ -19,6 +21,7 @@ class RegisterViewController: UIViewController, UINavigationControllerDelegate, 
     var dateArray: [AnyObject] = []*/
     let saveData = NSUserDefaults.standardUserDefaults()
 //    let iconData = NSUserDefaults.standardUserDefaults()//
+    
     
     //題名入力用TextField
     @IBOutlet var nameTextField: UITextField!
@@ -34,6 +37,8 @@ class RegisterViewController: UIViewController, UINavigationControllerDelegate, 
         super.viewDidLoad()
         //ViewControllerで選択された料理名をテキストフィールドに元から表示
 //        nameTextField.text = foodname
+        nameTextField.delegate = self
+        memoView.delegate = self
         
         if saveData.arrayForKey("TITLE") != nil /*&& iconData.arrayForKey("ICON") != nil */{
             titleArray = saveData.arrayForKey("TITLE")!
@@ -41,6 +46,17 @@ class RegisterViewController: UIViewController, UINavigationControllerDelegate, 
        /*     memoArray = saveData.arrayForKey("TITLE")!
             dateArray = saveData.arrayForKey("TITLE")!*/
         }
+    }
+    
+    //テキストフィールド入力時returnキーを押すとキーボードが隠れる
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    func textViewShouldEndEditing(textView: UITextView) -> Bool {
+        textView.resignFirstResponder()
+        return true
     }
     
     //カメラ、アルバムの呼び出しメソッド(カメラorアルバムのソースタイプが引数)

@@ -23,8 +23,7 @@ class AllViewController: UIViewController, UIActionSheetDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        scrollView.contentSize = CGSizeMake(self.view.frame.size.width, 1200)
+        scrollView.contentSize = CGSizeMake(self.view.frame.size.width, 800)
         
  
         if number == 0 {
@@ -49,15 +48,27 @@ class AllViewController: UIViewController, UIActionSheetDelegate {
     }
 
     func Egg() {
+        var sake: String!
+        var soysauce: String!
+        if personNumber < 3 {
+            sake = "小さじ \(personNumber)"
+            soysauce = "小さじ \(personNumber)/3"
+        } else if personNumber == 3 {
+            sake = "大さじ 1"
+            soysauce = "小さじ 1"
+        } else if personNumber == 4 {
+            sake = "大さじ 1 と 1/3"
+            soysauce = "小さじ 1 と 1/3"
+        }
         
         foodlabel.layer.position = CGPoint(x: self.view.bounds.width/2, y: 200)
-        foodlabel.text = "卵\(personNumber)個 \n だし汁大さじ\(personNumber) \n 塩ひとつまみ \n しょうゆ小さじ\(personNumber) \n 酒大さじ\(personNumber) \n 油大さじ１" //卵\3個 \n だし汁大さじ３ \n 塩ひとつまみ \n しょうゆ小さじ１ \n 酒大さじ１ \n 油大さじ１"
-
+        foodlabel.text = "卵 \(personNumber)個 \n だし汁 大さじ\(personNumber) \n 塩 ひとつまみ \n しょうゆ \(soysauce) \n 酒 \(sake) \n 油 大さじ 1"
         foodlabel.numberOfLines = 0
         foodlabel.sizeToFit()
         self.view.addSubview(foodlabel)
         
-        makeLabel.text = "玉子はまぜ過ぎない！ \n フライパンなどは、強火で予熱！流し入れたら火を落として一定に！ \n 焦げ防止は、多めに玉子液を流し込む！"
+        makeLabel.text = " 1. たまごを割って、軽く混ぜる \n 2. 調味料をいれて混ぜる \n 3. 油をひいて、強火にかける \n 4. 卵液を箸で落とし数秒で固まる温度になったら\n   　火を少し弱めて、卵液を半分くらい流し込む \n 5. 半熟になったらフライ返しで巻く \n 6. 残りの卵液を流し込む \n 7.最後は弱火にして、卵液を流し込み、形を整える \n 8. 切ってお皿に盛り付けて、完成！！"
+        // "玉子はまぜ過ぎない！ \n フライパンなどは、強火で予熱！流し入れたら火を落として一定に！ \n 焦げ防止は、多めに玉子液を流し込む！"
         ingredientImage.image = UIImage(named: "zai.gif")
         makeLabel.numberOfLines = 0
         makeLabel.sizeToFit()
@@ -65,7 +76,7 @@ class AllViewController: UIViewController, UIActionSheetDelegate {
     }
     
     func MeatPotato() {
-        foodlabel.text = "豚肩ロース薄切り肉100ｇ\nじゃがいも（馬鈴薯） 250ｇ\nたまねぎ 100ｇ\nにんじん 50ｇ\nさやいんげん 20ｇ\nしょうが 5ｇ\nしらたき100ｇ\n（Ａ）水1/2カップ（100ml）\n（Ａ）砂糖大さじ1\n（Ａ）みりん大さじ1\n（Ａ）酒大さじ1\n（Ａ）しょうゆ大さじ2"
+        foodlabel.text = "豚肩ロース薄切り肉100ｇ\nじゃがいも 250ｇ\nたまねぎ 100ｇ\nにんじん 50ｇ\nさやいんげん 20ｇ\nしょうが 5ｇ\nしらたき100ｇ\n (A)水1/2カップ（100ml）\n (A)砂糖大さじ1\n(A)みりん大さじ1\n(A)酒大さじ1\n(A)しょうゆ大さじ2"
         makeLabel.text = "じゃがいもは皮をむき、一口大に切って、水にさらして水気を切る。\nたまねぎは2cm幅のくし切りにする。"
         ingredientImage.image = UIImage(named: "zai.gif")
     }

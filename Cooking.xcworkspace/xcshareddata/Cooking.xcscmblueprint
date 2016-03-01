@@ -1,0 +1,44 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "C79C6807B27DA7C0A3F1A5FCB80C3A9663B87544",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "02535E5AC527A57C5AEAD827F8D7453210449D4D" : 0,
+    "C79C6807B27DA7C0A3F1A5FCB80C3A9663B87544" : 0,
+    "609F6195A4CBA1FEE27EB833949A55A284FCA933" : 0,
+    "73DC74D8291FA76E0EEB2D0AFE100A0D44BD6077" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "10F4AB31-967B-46F2-A294-37114E5D7645",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "02535E5AC527A57C5AEAD827F8D7453210449D4D" : "Cooking\/Cooking\/Life%20is%20Tech!\/%E7%B4%A0%E6%9D%90\/1-%E5%88%9D%E7%B4%9A%E7%B4%A0%E6%9D%90\/nabeatsu\/",
+    "C79C6807B27DA7C0A3F1A5FCB80C3A9663B87544" : "Cooking\/",
+    "609F6195A4CBA1FEE27EB833949A55A284FCA933" : "Cooking\/Cooking\/Life%20is%20Tech!\/%E7%B4%A0%E6%9D%90\/1-%E5%88%9D%E7%B4%9A%E7%B4%A0%E6%9D%90\/Clock\/",
+    "73DC74D8291FA76E0EEB2D0AFE100A0D44BD6077" : "Cooking\/Cooking\/Life%20is%20Tech!\/%E7%B4%A0%E6%9D%90\/1-%E5%88%9D%E7%B4%9A%E7%B4%A0%E6%9D%90\/Quiz\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Cooking",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Cooking.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/yurisekine\/nabeatsu.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "02535E5AC527A57C5AEAD827F8D7453210449D4D"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/yurisekine\/Clock.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "609F6195A4CBA1FEE27EB833949A55A284FCA933"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/yurisekine\/Quiz.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "73DC74D8291FA76E0EEB2D0AFE100A0D44BD6077"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/yurisekine\/Cooking.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "C79C6807B27DA7C0A3F1A5FCB80C3A9663B87544"
+    }
+  ]
+}

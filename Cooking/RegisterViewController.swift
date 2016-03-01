@@ -140,7 +140,6 @@ class RegisterViewController: UIViewController, UINavigationControllerDelegate, 
             if let data: NSData = UIImagePNGRepresentation(photoImageView.image!) {
                 imageArray.append(data)
             }
-//            imageArray.append(image)
 //            memoArray.append(memo)
 //            dateArray.append(date)
             saveData.setObject(nameArray, forKey: "NAME")

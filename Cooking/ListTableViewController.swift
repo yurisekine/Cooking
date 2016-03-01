@@ -11,11 +11,9 @@ import UIKit
 
 class ListTableViewController: UITableViewController {
     
-//    var iconimageView: UIImageView?//
-    
+//    var iconimageView: UIImageView?
     
     var nameArray: [AnyObject] = []
-//    let imageArray: NSArray = ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg"]
     var imageArray: [AnyObject] = []
 //    var memoArray:[AnyObject] = []
 //    var dateArray:[AnyObject] = []
@@ -116,14 +114,45 @@ class ListTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath ) -> Bool {
         return true
     }
-
+    
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == UITableViewCellEditingStyle.Delete {
-            nameArray.removeAtIndex(indexPath.row)
+            
+            //本当にするのか確認のアラート
+            let alert = UIAlertController(title: "警告", message: "本当に削除していいですか？", preferredStyle: .Alert)
+            
+            let cancelAction = UIAlertAction(title: "cancel", style: .Cancel, handler:nil)
+            let removeAction = UIAlertAction(title: "削除", style: .Default) {
+                action in
+                //削除
+                self.nameArray.removeAtIndex(indexPath.row)
+                self.imageArray.removeAtIndex(indexPath.row)
+                tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
+                self.saveData.setObject(self.nameArray, forKey: "NAME")
+                self.saveData.setObject(self.imageArray, forKey: "IMAGE")
+                
+                
+                
+            }
+            
+            alert.addAction(cancelAction)
+            alert.addAction(removeAction)
+            presentViewController(alert, animated: true, completion: nil)
+            
+            
+            
+     /*       nameArray.removeAtIndex(indexPath.row)
+            imageArray.removeAtIndex(indexPath.row)
+            */
+            
 //            memoArray.removeAtIndex(indexPath.row)
-//            iconArray.removeAtIndex(indexPath.row)//
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
+            
+        /*    tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
             saveData.setObject(nameArray, forKey: "NAME")
+            saveData.setObject(imageArray, forKey: "IMAGE")
+          */
+            
+            
 //            saveData.setObject(memoArray, forKey: "MEMO")
 //            iconData.setObject(iconArray, forKey: "ICON")//
            

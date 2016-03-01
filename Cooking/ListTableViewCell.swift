@@ -11,7 +11,7 @@ import UIKit
 //セルの画面
 class ListTableViewCell: UITableViewCell {
     
-    @IBOutlet var titleLabel: UILabel!
+    @IBOutlet var nameLabel: UILabel!
     @IBOutlet var iconImage: UIImageView!
     
     override func awakeFromNib() {

@@ -14,20 +14,18 @@ class ListTableViewController: UITableViewController {
 //    var iconimageView: UIImageView?//
     
     
-    var titleArray: [AnyObject] = []
-    let imageArray: NSArray = ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg"]//iconArray
+    var nameArray: [AnyObject] = []
+    let imageArray: NSArray = ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg"]
 //    var memoArray:[AnyObject] = []
 //    var dateArray:[AnyObject] = []
+    
     var selectedImage: UIImage?
     var selectedName: String?
-//    var selectedDate: String?
+//    var selectedDate: String? int
 //    var selectedMemo: String?
     
-    
-//    var iconArray: [AnyObject] = []//
     let saveData = NSUserDefaults.standardUserDefaults()
-//    let iconData = NSUserDefaults.standardUserDefaults()//
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -36,12 +34,14 @@ class ListTableViewController: UITableViewController {
     }
     
     override func viewWillAppear(animated: Bool) {
-        if saveData.arrayForKey("TITLE") != nil/* && iconData.arrayForKey("ICON") != nil*/{
-            titleArray = saveData.arrayForKey("TITLE")!
-//            iconArray = iconData.arrayForKey("ICON")!//
+        if saveData.arrayForKey("NAME") != nil {
+            nameArray = saveData.arrayForKey("NAME")!
         }
         tableView.reloadData()
     }
+    
+    
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -58,14 +58,14 @@ class ListTableViewController: UITableViewController {
     //セルの個数を指定
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return titleArray.count
+        return nameArray.count
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! ListTableViewCell
-        let nowIndexPathDictionary: (AnyObject) = titleArray[indexPath.row]
+        let nowIndexPathDictionary: (AnyObject) = nameArray[indexPath.row]
 //        let iconIndexPathDictionary: (AnyObject) = iconArray[indexPath.row]//
-        cell.titleLabel.text = nowIndexPathDictionary["title"] as? String
+        cell.nameLabel.text = nowIndexPathDictionary["name"] as? String
         cell.iconImage.image = UIImage(named:"\(imageArray[indexPath.row])")//
         //
 //        cell.iconImage.image = iconIndexPathDictionary["icon"] as? UIImage
@@ -80,12 +80,13 @@ class ListTableViewController: UITableViewController {
     
     //セルが選択された場合
     override func tableView(table: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let nowIndexPathDictionary: (AnyObject) = titleArray[indexPath.row]
+        let nowIndexPathDictionary: (AnyObject) = nameArray[indexPath.row]
+//        let memonowIndexPathDictionary: (AnyObject) = memoArray[indexPath.row]
         selectedImage = UIImage(named: "\(imageArray[indexPath.row])")
 //        selectedName = titleArray[indexPath.row] as! String
-        selectedName = nowIndexPathDictionary["title"] as! String
+        selectedName = nowIndexPathDictionary["name"] as? String
 //        selectedDate = dateArray[indexPath.row] as! String
-//        selectedMemo = memoArray[indexPath.row] as! String
+//        selectedMemo = nowIndexPathDictionary["memo"] as! String
         if selectedImage != nil {
             performSegueWithIdentifier("toCellViewController", sender: nil)
         }
@@ -111,10 +112,12 @@ class ListTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == UITableViewCellEditingStyle.Delete {
-            titleArray.removeAtIndex(indexPath.row)
+            nameArray.removeAtIndex(indexPath.row)
+//            memoArray.removeAtIndex(indexPath.row)
 //            iconArray.removeAtIndex(indexPath.row)//
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
-            saveData.setObject(titleArray, forKey: "TITLE")
+            saveData.setObject(nameArray, forKey: "NAME")
+//            saveData.setObject(memoArray, forKey: "MEMO")
 //            iconData.setObject(iconArray, forKey: "ICON")//
            
             

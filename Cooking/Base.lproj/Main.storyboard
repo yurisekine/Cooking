@@ -118,16 +118,19 @@
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <segue destination="tqH-p0-yfo" kind="push" identifier="toCellViewController" id="Wim-XC-Vkv"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0fI-DS-2tr" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="ZrX-9r-A6Y" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1200.5" y="1126.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Cell View Controller-->
         <scene sceneID="KZd-H1-dJw">
             <objects>
-                <viewController id="tqH-p0-yfo" sceneMemberID="viewController">
+                <viewController id="tqH-p0-yfo" customClass="CellViewController" customModule="Cooking" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="LWA-gk-Ct3"/>
                         <viewControllerLayoutGuide type="bottom" id="qMZ-Fi-BtG"/>
@@ -135,9 +138,39 @@
                     <view key="view" contentMode="scaleToFill" id="IJU-58-Qno">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="料理名" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dri-L5-TCO">
+                                <rect key="frame" x="112" y="64" width="151" height="50"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="メモ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z3N-QD-Ct3">
+                                <rect key="frame" x="183" y="431" width="168" height="158"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="日付" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6fu-5j-Y2b">
+                                <rect key="frame" x="23" y="477" width="159" height="66"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fEa-Ke-Tdf">
+                                <rect key="frame" x="23" y="122" width="328" height="271"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="P3H-uf-113"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="dateLabel" destination="6fu-5j-Y2b" id="anh-X3-LQ2"/>
+                        <outlet property="imageView" destination="fEa-Ke-Tdf" id="dus-5L-3Lw"/>
+                        <outlet property="memoLabel" destination="Z3N-QD-Ct3" id="paI-BH-ZtX"/>
+                        <outlet property="nameLabel" destination="dri-L5-TCO" id="4iE-4l-68F"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="10l-ub-x9t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -11,13 +11,19 @@ import UIKit
 
 class ListTableViewController: UITableViewController {
     
-    
-//    var foodname: String?
 //    var iconimageView: UIImageView?//
     
     
     var titleArray: [AnyObject] = []
-    let imageArray: NSArray = ["1.jpg", "2.jpg", "3.jpg", "4.jpg"]//
+    let imageArray: NSArray = ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg"]//iconArray
+//    var memoArray:[AnyObject] = []
+//    var dateArray:[AnyObject] = []
+    var selectedImage: UIImage?
+    var selectedName: String?
+//    var selectedDate: String?
+//    var selectedMemo: String?
+    
+    
 //    var iconArray: [AnyObject] = []//
     let saveData = NSUserDefaults.standardUserDefaults()
 //    let iconData = NSUserDefaults.standardUserDefaults()//
@@ -70,6 +76,31 @@ class ListTableViewController: UITableViewController {
         }
         
         return cell
+    }
+    
+    //セルが選択された場合
+    override func tableView(table: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let nowIndexPathDictionary: (AnyObject) = titleArray[indexPath.row]
+        selectedImage = UIImage(named: "\(imageArray[indexPath.row])")
+//        selectedName = titleArray[indexPath.row] as! String
+        selectedName = nowIndexPathDictionary["title"] as! String
+//        selectedDate = dateArray[indexPath.row] as! String
+//        selectedMemo = memoArray[indexPath.row] as! String
+        if selectedImage != nil {
+            performSegueWithIdentifier("toCellViewController", sender: nil)
+        }
+ 
+
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "toCellViewController" {
+            let cellV: CellViewController = (segue.destinationViewController as? CellViewController)!
+            cellV.selectedImage = selectedImage
+            cellV.selectedName = selectedName
+//            cellV.selectedDate = selectedDate
+//            cellV.selectedMemo = selectedMemo
+        }
     }
     
     

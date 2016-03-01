@@ -12,13 +12,12 @@ import UIKit
 
 class RegisterViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextFieldDelegate, UITextViewDelegate{
     
-   // @IBOutlet var titleTextField: UITextField!
-    var foodname: String?
+    var foodname: String?//
     
     var titleArray: [AnyObject] = []
 //    var iconArray: [AnyObject] = []
- /*   var memoArray: [AnyObject] = []
-    var dateArray: [AnyObject] = []*/
+//    var memoArray: [AnyObject] = []
+//    var dateArray: [AnyObject] = []
     let saveData = NSUserDefaults.standardUserDefaults()
 //    let iconData = NSUserDefaults.standardUserDefaults()//
     
@@ -35,16 +34,15 @@ class RegisterViewController: UIViewController, UINavigationControllerDelegate, 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //ViewControllerで選択された料理名をテキストフィールドに元から表示
-//        nameTextField.text = foodname
+
         nameTextField.delegate = self
         memoView.delegate = self
         
         if saveData.arrayForKey("TITLE") != nil /*&& iconData.arrayForKey("ICON") != nil */{
             titleArray = saveData.arrayForKey("TITLE")!
 //            iconArray = iconData.arrayForKey("ICON")!//
-       /*     memoArray = saveData.arrayForKey("TITLE")!
-            dateArray = saveData.arrayForKey("TITLE")!*/
+//           memoArray = saveData.arrayForKey("TITLE")!
+//            dateArray = saveData.arrayForKey("TITLE")!
         }
     }
     
@@ -121,8 +119,8 @@ class RegisterViewController: UIViewController, UINavigationControllerDelegate, 
         
         let titleDictionary = ["title": nameTextField.text!] //!なしだとString?型、!をつけてString型に
 //        let image = ["image": photoImageView.image!]
-       /* let date = ["date": datePicker.date]
-        let memo = ["memo": memoView.text!]*/
+//        let date = ["date": datePicker.date]
+//        let memo = ["memo": memoView.text!]
         
         if nameTextField.text == "" /*|| photoImageView.image == ""*/ {
             let alert = UIAlertController(
@@ -142,10 +140,11 @@ class RegisterViewController: UIViewController, UINavigationControllerDelegate, 
             
             titleArray.append(titleDictionary)
 //            iconArray.append(image)
-       /*     memoArray.append(memo)
-            dateArray.append(date)*/
+//            memoArray.append(memo)
+//            dateArray.append(date)
             saveData.setObject(titleArray, forKey: "TITLE")
 //            iconData.setObject(iconArray, forKey: "ICON")//
+//            saveData.setObject(memoArray, forKey: "TITLE")
             
             let alert = UIAlertController(
                 title: "保存完了",

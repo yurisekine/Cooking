@@ -8,6 +8,7 @@
 
 import UIKit
 
+//セルの画面
 class ListTableViewCell: UITableViewCell {
     
     @IBOutlet var titleLabel: UILabel!

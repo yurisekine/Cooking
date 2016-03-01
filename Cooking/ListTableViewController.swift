@@ -15,7 +15,8 @@ class ListTableViewController: UITableViewController {
     
     
     var nameArray: [AnyObject] = []
-    let imageArray: NSArray = ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg"]
+//    let imageArray: NSArray = ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg"]
+    var imageArray: [AnyObject] = []
 //    var memoArray:[AnyObject] = []
 //    var dateArray:[AnyObject] = []
     
@@ -34,8 +35,9 @@ class ListTableViewController: UITableViewController {
     }
     
     override func viewWillAppear(animated: Bool) {
-        if saveData.arrayForKey("NAME") != nil {
+        if saveData.arrayForKey("NAME") != nil && saveData.arrayForKey("IMAGE") != nil{
             nameArray = saveData.arrayForKey("NAME")!
+            imageArray = saveData.arrayForKey("IMAGE")!
         }
         tableView.reloadData()
     }
@@ -64,11 +66,16 @@ class ListTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! ListTableViewCell
         let nowIndexPathDictionary: (AnyObject) = nameArray[indexPath.row]
-//        let iconIndexPathDictionary: (AnyObject) = iconArray[indexPath.row]//
+//        let iconIndexPathDictionary: (AnyObject) = imageArray[indexPath.row]//
         cell.nameLabel.text = nowIndexPathDictionary["name"] as? String
-        cell.iconImage.image = UIImage(named:"\(imageArray[indexPath.row])")//
-        //
-//        cell.iconImage.image = iconIndexPathDictionary["icon"] as? UIImage
+        
+        let nsData = imageArray[indexPath.row]
+        var image = UIImage(data: nsData as! NSData)
+        cell.iconImage.image = image
+        
+        
+//        cell.iconImage.image = UIImage(named:"\(imageArray[indexPath.row])")//
+//        cell.iconImage.image = iconIndexPathDictionary["image"] as? UIImage
         
         //偶数列の色を変える
         if indexPath.row % 2 == 1 {

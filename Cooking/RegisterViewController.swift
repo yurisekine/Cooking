@@ -11,7 +11,7 @@ import UIKit
 class RegisterViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextFieldDelegate, UITextViewDelegate{
     
     var nameArray: [AnyObject] = []
-//    var iconArray: [AnyObject] = []
+    var imageArray: [AnyObject] = []
 //    var memoArray: [String] = []
 //    var dateArray: [AnyObject] = []
     
@@ -34,9 +34,9 @@ class RegisterViewController: UIViewController, UINavigationControllerDelegate, 
         nameTextField.delegate = self
         memoView.delegate = self
         
-        if saveData.arrayForKey("NAME") != nil {
+        if saveData.arrayForKey("NAME") != nil && saveData.arrayForKey("IMAGE") != nil {
             nameArray = saveData.arrayForKey("NAME")!
-//            iconArray = iconData.arrayForKey("ICON")!//
+            imageArray = saveData.arrayForKey("IMAGE")!//
 //            memoArray = saveData.arrayForKey("MEMO")!
 //            dateArray = saveData.arrayForKey("TITLE")!
         }
@@ -107,14 +107,7 @@ class RegisterViewController: UIViewController, UINavigationControllerDelegate, 
         //アラートを表示
         presentViewController(alertController, animated: true, completion: nil)
     }
-    
-    func ImageString(image:UIImage) -> NSData {
-        
-        let data:NSData = UIImagePNGRepresentation(image)!
-        
-        return data
-        
-    }
+
     
     @IBAction func save() {
         
@@ -122,11 +115,11 @@ class RegisterViewController: UIViewController, UINavigationControllerDelegate, 
 //         = NSDateFormatter.localizedStringFromDate(date, dateStyle: NSDateFormatterStyle.LongStyle)
         
         let name = ["name": nameTextField.text!] //!なしだとString?型、!をつけてString型に
-//        let image = ["image": photoImageView.image!]
+//        let image = ["image": photoImageView.image!]いらなそう
 //        let date = ["date": datePicker.date]
 //        let memo = ["memo": memoView.text!]
        
-        if nameTextField.text == "" /*|| photoImageView.image == ""*/ || memoView.text == "" {
+        if nameTextField.text == "" || photoImageView.image == nil /*|| memoView.text == "" */{
             let alert = UIAlertController(
                 title: "保存失敗",
                 message: "料理名、または画像が未入力です",
@@ -143,11 +136,15 @@ class RegisterViewController: UIViewController, UINavigationControllerDelegate, 
         } else {
             
             nameArray.append(name)
-//            iconArray.append(image)
+            
+            if let data: NSData = UIImagePNGRepresentation(photoImageView.image!) {
+                imageArray.append(data)
+            }
+//            imageArray.append(image)
 //            memoArray.append(memo)
 //            dateArray.append(date)
             saveData.setObject(nameArray, forKey: "NAME")
-//            iconData.setObject(iconArray, forKey: "ICON")//
+            saveData.setObject(imageArray, forKey: "IMAGE")
 //            saveData.setObject(memoArray, forKey: "MEMO")
             
             let alert = UIAlertController(
@@ -163,7 +160,7 @@ class RegisterViewController: UIViewController, UINavigationControllerDelegate, 
             )
             self.presentViewController(alert, animated: true, completion: nil)
             nameTextField.text = ""
-//            photoImageView.image = nil
+            photoImageView.image = nil
 //            memoView.text = ""
             
         

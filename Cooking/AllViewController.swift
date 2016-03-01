@@ -62,7 +62,7 @@ class AllViewController: UIViewController, UIActionSheetDelegate {
         }
         
         foodlabel.layer.position = CGPoint(x: self.view.bounds.width/2, y: 200)
-        foodlabel.text = "卵 \(personNumber)個 \n だし汁 大さじ\(personNumber) \n 塩 ひとつまみ \n しょうゆ \(soysauce) \n 酒 \(sake) \n 油 大さじ 1"
+        foodlabel.text = " 卵 \(personNumber)個 \n だし汁 大さじ\(personNumber) \n 塩 ひとつまみ \n しょうゆ \(soysauce) \n 酒 \(sake) \n 油 大さじ 1"
         foodlabel.numberOfLines = 0
         foodlabel.sizeToFit()
         self.view.addSubview(foodlabel)

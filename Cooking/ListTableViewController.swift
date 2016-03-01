@@ -17,9 +17,10 @@ class ListTableViewController: UITableViewController {
     
     
     var titleArray: [AnyObject] = []
+    let imageArray: NSArray = ["1.jpg", "2.jpg", "3.jpg", "4.jpg"]//
 //    var iconArray: [AnyObject] = []//
     let saveData = NSUserDefaults.standardUserDefaults()
-    let iconData = NSUserDefaults.standardUserDefaults()//
+//    let iconData = NSUserDefaults.standardUserDefaults()//
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,6 +60,7 @@ class ListTableViewController: UITableViewController {
         let nowIndexPathDictionary: (AnyObject) = titleArray[indexPath.row]
 //        let iconIndexPathDictionary: (AnyObject) = iconArray[indexPath.row]//
         cell.titleLabel.text = nowIndexPathDictionary["title"] as? String
+        cell.iconImage.image = UIImage(named:"\(imageArray[indexPath.row])")//
         //
 //        cell.iconImage.image = iconIndexPathDictionary["icon"] as? UIImage
         

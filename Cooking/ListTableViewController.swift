@@ -15,13 +15,13 @@ class ListTableViewController: UITableViewController {
     
     var nameArray: [AnyObject] = []
     var imageArray: [AnyObject] = []
-//    var memoArray:[AnyObject] = []
-//    var dateArray:[AnyObject] = []
+    var memoArray:[AnyObject] = []
+    var dateArray:[AnyObject] = []
     
     var selectedImage: UIImage?
     var selectedName: String?
-//    var selectedDate: String? int
-//    var selectedMemo: String?
+    var selectedDate: String?
+    var selectedMemo: String?
     
     let saveData = NSUserDefaults.standardUserDefaults()
 
@@ -33,11 +33,22 @@ class ListTableViewController: UITableViewController {
     }
     
     override func viewWillAppear(animated: Bool) {
-        if saveData.arrayForKey("NAME") != nil && saveData.arrayForKey("IMAGE") != nil{
+        //キー
+        if saveData.arrayForKey("NAME") != nil {
             nameArray = saveData.arrayForKey("NAME")!
-            imageArray = saveData.arrayForKey("IMAGE")!
-//            memoArray = saveData.arrayForKey("MEMO")!
         }
+        if saveData.arrayForKey("IMAGE") != nil {
+            imageArray = saveData.arrayForKey("IMAGE")!
+        }
+        if saveData.arrayForKey("DATE") != nil {
+             dateArray = saveData.arrayForKey("DATE")!
+            print("dateArray...1回目\(dateArray)")
+        }
+        if saveData.arrayForKey("MEMO") != nil {
+            memoArray = saveData.arrayForKey("MEMO")!
+            print("memoArray...\(memoArray)")
+        }
+        
         tableView.reloadData()
     }
     
@@ -66,16 +77,13 @@ class ListTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! ListTableViewCell
         let nowIndexPathDictionary: (AnyObject) = nameArray[indexPath.row]
-
         cell.nameLabel.text = nowIndexPathDictionary["name"] as? String
         
         let nsData = imageArray[indexPath.row] //var
         let image = UIImage(data: nsData as! NSData)
         cell.iconImage.image = image
         
-        
 //        cell.iconImage.image = UIImage(named:"\(imageArray[indexPath.row])")//
-//        cell.iconImage.image = iconIndexPathDictionary["image"] as? UIImage
         
         cell.nameLabel.textColor = UIColor.brownColor()
         //偶数列の色を変える
@@ -91,27 +99,31 @@ class ListTableViewController: UITableViewController {
     override func tableView(table: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
         let nowIndexPathDictionary: (AnyObject) = nameArray[indexPath.row]
-//        let memonowIndexPathDictionary1: (AnyObject) = memoArray[indexPath.row]
+        selectedName = nowIndexPathDictionary["name"] as? String
         
         let nsData = imageArray[indexPath.row] //var
         selectedImage = UIImage(data: nsData as! NSData)
+
+        selectedDate = dateArray[indexPath.row] as? String
+        print("押した時dateArrayは...\(dateArray)")
         
-        
-//        selectedImage = UIImage(named: "\(imageArray[indexPath.row])")
-        
-        
-//        selectedName = nameArray[indexPath.row] as! String
-        selectedName = nowIndexPathDictionary["name"] as? String
-//        selectedDate = dateArray[indexPath.row] as! String
 //        selectedMemo = memonowIndexPathDictionary["memo"] as? String
-//        selectedMemo = memoArray[indexPath.row] as! String
+//        selectedMemo = memoArray[indexPath.row] as? String
+        let memonowIndexPathDictionary: (AnyObject) = memoArray[indexPath.row]
+        selectedMemo = memonowIndexPathDictionary["memo"] as? String
         
-//        if selectedImage != nil {
+        if selectedImage != nil {
             performSegueWithIdentifier("toCellViewController", sender: nil)
-//        } else {
-//        print("画像がありません")
-//    }
+        } else {
+        print("画像なし")
+    }
+        if selectedDate == "" {
+            print("日付なし")
+        }
  
+        if selectedMemo == "" {
+            print("メモなし")
+        }
 
     }
     
@@ -120,8 +132,8 @@ class ListTableViewController: UITableViewController {
             let cellV: CellViewController = (segue.destinationViewController as? CellViewController)!
             cellV.selectedImage = selectedImage
             cellV.selectedName = selectedName
-//            cellV.selectedDate = selectedDate
-//            cellV.selectedMemo = selectedMemo
+            cellV.selectedDate = selectedDate
+            cellV.selectedMemo = selectedMemo
         }
     }
     
@@ -143,13 +155,13 @@ class ListTableViewController: UITableViewController {
                 //削除
                 self.nameArray.removeAtIndex(indexPath.row)
                 self.imageArray.removeAtIndex(indexPath.row)
-//                self.memoArray.removeAtIndex(indexPath.row)
+                self.dateArray.removeAtIndex(indexPath.row)
+                self.memoArray.removeAtIndex(indexPath.row)
                 tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
                 self.saveData.setObject(self.nameArray, forKey: "NAME")
                 self.saveData.setObject(self.imageArray, forKey: "IMAGE")
-//                self.saveData.setObject(self.memoArray, forKey: "MEMO")
-                
-                
+                self.saveData.setObject(self.dateArray, forKey: "DATE")
+                self.saveData.setObject(self.memoArray, forKey: "MEMO")
                 
             }
             

@@ -24,7 +24,7 @@ class memoViewController: UIViewController {
         super.viewDidLoad()
         
         //メモが入力された場合
-        if((saveData.objectForKey("memo")) != nil) {
+        if (saveData.objectForKey("memo")) != nil {
             
             //保存内容を格納
             let objects = saveData.objectForKey("memo") as? [String]

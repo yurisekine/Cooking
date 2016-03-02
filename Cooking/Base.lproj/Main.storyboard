@@ -167,13 +167,14 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.71372549019607845" green="0.58431372549019611" blue="0.45490196078431372" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="P3H-uf-113"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="dateLabel" destination="6fu-5j-Y2b" id="ZW9-kX-XXi"/>
                         <outlet property="imageView" destination="fEa-Ke-Tdf" id="aAJ-ae-Vdc"/>
-                        <outlet property="memoTextView" destination="KYu-R1-bjT" id="JQI-U2-WLt"/>
+                        <outlet property="memoTextView" destination="KYu-R1-bjT" id="Mte-bk-zHL"/>
                         <outlet property="nameLabel" destination="dri-L5-TCO" id="TiS-bO-gfZ"/>
                     </connections>
                 </viewController>
@@ -264,7 +265,7 @@
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="datePicker" destination="yFb-hN-zPB" id="URM-r9-S7G"/>
+                        <outlet property="datePicker" destination="yFb-hN-zPB" id="Bzo-kJ-p3a"/>
                         <outlet property="memoView" destination="wqC-TV-bqx" id="rZF-hu-sba"/>
                         <outlet property="nameTextField" destination="dpX-AS-3Qw" id="d8a-Wo-gu0"/>
                         <outlet property="photoImageView" destination="8iS-SD-2m8" id="rru-jR-ijf"/>
@@ -416,13 +417,6 @@
                                 <rect key="frame" x="112" y="83" width="150" height="2"/>
                                 <color key="tintColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                             </progressView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jeg-Pz-vUD">
-                                <rect key="frame" x="319" y="221" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="icc-PP-wDx" kind="push" id="xJz-yb-vSy"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="料理内容" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lvz-Je-nxa">
                                 <rect key="frame" x="10" y="100" width="355" height="151"/>
                                 <color key="backgroundColor" red="0.92941176470588238" green="0.94509803921568625" blue="0.68235294117647061" alpha="1" colorSpace="calibratedRGB"/>

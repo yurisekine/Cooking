@@ -12,8 +12,8 @@ class RegisterViewController: UIViewController, UINavigationControllerDelegate, 
     
     var nameArray: [AnyObject] = []
     var imageArray: [AnyObject] = []
-//    var memoArray: [AnyObject] = []
-//    var dateArray: [AnyObject] = []
+    var memoArray: [AnyObject] = []
+    var dateArray: [AnyObject] = []
     
     let saveData = NSUserDefaults.standardUserDefaults()
     
@@ -34,12 +34,19 @@ class RegisterViewController: UIViewController, UINavigationControllerDelegate, 
         nameTextField.delegate = self
         memoView.delegate = self
         
-        if saveData.arrayForKey("NAME") != nil && saveData.arrayForKey("IMAGE") != nil {
+        if saveData.arrayForKey("NAME") != nil {
             nameArray = saveData.arrayForKey("NAME")!
-            imageArray = saveData.arrayForKey("IMAGE")!
-//            memoArray = saveData.arrayForKey("MEMO")!
-//            dateArray = saveData.arrayForKey("TITLE")!
         }
+        if saveData.arrayForKey("IMAGE") != nil {
+            imageArray = saveData.arrayForKey("IMAGE")!
+        }
+        if saveData.arrayForKey("DATE") != nil {
+            dateArray = saveData.arrayForKey("DATE")!
+        }
+        if saveData.arrayForKey("MEMO") != nil {
+            memoArray = saveData.arrayForKey("MEMO")!
+        }
+
     }
     
     //テキストフィールド入力時returnキーを押すとキーボードが隠れる
@@ -95,6 +102,7 @@ class RegisterViewController: UIViewController, UINavigationControllerDelegate, 
         }
         let secondAction = UIAlertAction(title: "アルバム", style:  .Default) {
             action in
+            
             self.precentPickerController(.PhotoLibrary)
         }
         let cancelAction = UIAlertAction(title: "キャンセル", style: .Cancel, handler: nil)
@@ -107,17 +115,26 @@ class RegisterViewController: UIViewController, UINavigationControllerDelegate, 
         //アラートを表示
         presentViewController(alertController, animated: true, completion: nil)
     }
+    
+  
+    
+    //datepickerをStringに
+    func format(date : NSDate, style : String) -> String {
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.locale = NSLocale(localeIdentifier: "ja_JP")
+        dateFormatter.dateFormat = style
+        return  dateFormatter.stringFromDate(date)
+    }
 
     
     @IBAction func save() {
         
-//        let date = datePicker.date
-//         = NSDateFormatter.localizedStringFromDate(date, dateStyle: NSDateFormatterStyle.LongStyle)
-        
         let name = ["name": nameTextField.text!] //!なしだとString?型、!をつけてString型に
 //        let image = ["image": photoImageView.image!]いらなそう
-//        let date = ["date": datePicker.date]
-//        let memo = ["memo": memoView.text!]
+//        let date = ["date": format(datePicker.date, style: "yyyy/MM/dd")]
+        let memo = ["memo": memoView.text!]
+        
+        
        
         if nameTextField.text == "" || photoImageView.image == nil /*|| memoView.text == "" */{
             let alert = UIAlertController(
@@ -136,16 +153,18 @@ class RegisterViewController: UIViewController, UINavigationControllerDelegate, 
         } else {
             
             nameArray.append(name)
-//            memoArray.append(memo)
+            memoArray.append(memo)
+            let date = format(datePicker.date, style: "yyyy/MM/dd")
+            dateArray.append(date)
             
             if let data: NSData = UIImagePNGRepresentation(photoImageView.image!) {
                 imageArray.append(data)
             }
-            
-//            dateArray.append(date)
+
             saveData.setObject(nameArray, forKey: "NAME")
             saveData.setObject(imageArray, forKey: "IMAGE")
-//            saveData.setObject(memoArray, forKey: "MEMO")
+            saveData.setObject(memoArray, forKey: "MEMO")
+            saveData.setObject(dateArray, forKey: "DATE")
             
             let alert = UIAlertController(
                 title: "保存完了",
@@ -161,7 +180,7 @@ class RegisterViewController: UIViewController, UINavigationControllerDelegate, 
             self.presentViewController(alert, animated: true, completion: nil)
             nameTextField.text = ""
             photoImageView.image = nil
-//            memoView.text = "メモ"
+            memoView.text = "メモ"
             
         
         }
@@ -197,8 +216,5 @@ class RegisterViewController: UIViewController, UINavigationControllerDelegate, 
         presentViewController(alertController, animated: true, completion: nil)
     }
     */
-    
-
-    
 
 }

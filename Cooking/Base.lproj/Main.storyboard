@@ -255,6 +255,10 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="0.54105603449999995" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="ae6-DF-K8h" appends="YES" id="jrE-5F-dHr"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="登録" id="6Kv-TP-Vfw">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="8dQ-dL-dJq">
@@ -272,6 +276,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PkG-BE-pEg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="ae6-DF-K8h">
+                    <connections>
+                        <action selector="tapScreen:" destination="OW8-H6-MnD" id="RJW-jx-xeG"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1695.5" y="962.5"/>
         </scene>

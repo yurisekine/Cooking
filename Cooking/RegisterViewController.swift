@@ -55,6 +55,11 @@ class RegisterViewController: UIViewController, UINavigationControllerDelegate, 
         return true
     }
     
+    //画面タップするとキーボード隠れる
+    @IBAction func tapScreen(sender: UITapGestureRecognizer) {
+        self.view.endEditing(true)
+    }
+    
    /* func textViewShouldEndEditing(textView: UITextView) -> Bool {
         textView.resignFirstResponder()
         return true
@@ -185,36 +190,6 @@ class RegisterViewController: UIViewController, UINavigationControllerDelegate, 
         
         }
     }
-    
-    
-    //登録ボタンを押した時に呼ばれるメソッド
-  /*  @IBAction func registerButton(sender: UIButton) {
-    
-    let date = datePicker.date
-    //配列に保存するように書き換えるココ
-    label1.text = NSDateFormatter.localizedStringFromDate(date, dateStyle: NSDateFormatterStyle.LongStyle, timeStyle: NSDateFormatterStyle.ShortStyle)
-    
-    
-        guard let selectedPhoto = photoImageView.image else {
-            simpleAlert("画像がありません")
-            return
-        }
-    
-        
-        let alertController = UIAlertController(title: "アップロード先を選択", message: nil, preferredStyle: .ActionSheet)
-    
-        let thirdAction = UIAlertAction(title: "カメラロールに保存", style: .Default) {
-            action in
-            UIImageWriteToSavedPhotosAlbum(selectedPhoto, self, nil, nil)
-            self.simpleAlert("アルバムに保存されました。")
-        }
-        let cancelAction = UIAlertAction(title: "キャンセル", style: .Cancel, handler: nil)
-    
-        alertController.addAction(thirdAction)
-        alertController.addAction(cancelAction)
-        
-        presentViewController(alertController, animated: true, completion: nil)
-    }
-    */
+
 
 }

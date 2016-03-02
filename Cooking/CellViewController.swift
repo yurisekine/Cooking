@@ -14,12 +14,12 @@ class CellViewController: UIViewController {
     
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var imageView: UIImageView!
-    @IBOutlet var dateLabel: UILabel!
-    @IBOutlet var memoLabel: UILabel!
+//    @IBOutlet var dateLabel: UILabel!
+    @IBOutlet var memoTextView: UITextView!
     
     var selectedName: String!
     var selectedImage: UIImage!
-    var selectedDate: String!
+//    var selectedDate: String!
     var selectedMemo: String!
     
     override func viewDidLoad() {
@@ -28,7 +28,7 @@ class CellViewController: UIViewController {
         nameLabel.text = selectedName
         imageView.image = selectedImage
 //        dateLabel.text = selectedDate
-//        memoLabel.text = selectedMemo
+//        memoTextView.text = selectedMemo
         
         
     }

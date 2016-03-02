@@ -28,7 +28,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         menuPickerView.dataSource = self
         
         menuImageArray = [
-                UIImage(named: "egg.gif")!,
+                UIImage(named: "egg9.jpg")!,
                 UIImage(named: "meatpotato.gif")!,
                 UIImage(named: "han.gif")!,
                 UIImage(named: "omu.gif")!

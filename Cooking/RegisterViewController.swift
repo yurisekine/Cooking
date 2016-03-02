@@ -12,7 +12,7 @@ class RegisterViewController: UIViewController, UINavigationControllerDelegate, 
     
     var nameArray: [AnyObject] = []
     var imageArray: [AnyObject] = []
-//    var memoArray: [String] = []
+//    var memoArray: [AnyObject] = []
 //    var dateArray: [AnyObject] = []
     
     let saveData = NSUserDefaults.standardUserDefaults()
@@ -36,7 +36,7 @@ class RegisterViewController: UIViewController, UINavigationControllerDelegate, 
         
         if saveData.arrayForKey("NAME") != nil && saveData.arrayForKey("IMAGE") != nil {
             nameArray = saveData.arrayForKey("NAME")!
-            imageArray = saveData.arrayForKey("IMAGE")!//
+            imageArray = saveData.arrayForKey("IMAGE")!
 //            memoArray = saveData.arrayForKey("MEMO")!
 //            dateArray = saveData.arrayForKey("TITLE")!
         }
@@ -136,11 +136,12 @@ class RegisterViewController: UIViewController, UINavigationControllerDelegate, 
         } else {
             
             nameArray.append(name)
+//            memoArray.append(memo)
             
             if let data: NSData = UIImagePNGRepresentation(photoImageView.image!) {
                 imageArray.append(data)
             }
-//            memoArray.append(memo)
+            
 //            dateArray.append(date)
             saveData.setObject(nameArray, forKey: "NAME")
             saveData.setObject(imageArray, forKey: "IMAGE")
@@ -160,7 +161,7 @@ class RegisterViewController: UIViewController, UINavigationControllerDelegate, 
             self.presentViewController(alert, animated: true, completion: nil)
             nameTextField.text = ""
             photoImageView.image = nil
-//            memoView.text = ""
+//            memoView.text = "メモ"
             
         
         }

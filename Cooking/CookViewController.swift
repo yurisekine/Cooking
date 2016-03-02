@@ -65,7 +65,8 @@ class CookViewController: UIViewController {
             "半熟になったらフライ返しで巻く",
             "残りの卵液を流し込む",
             "最後は弱火にして、卵液を流し込み、 \n　形を整える",
-            "切ってお皿に盛り付けて、完成！！"
+            "切ってお皿に盛り付けて、完成！！",
+            "ななめに切り込みを入れるとハートにもできるよ！"
         ]
         itemTextArray = [
             "手を洗って準備しよう！",
@@ -76,18 +77,20 @@ class CookViewController: UIViewController {
             "フライ返し",
             "卵液",
             "",
-            "お皿、ナイフ"
+            "お皿、ナイフ",
+            "ナイフ"
         ]
         foodImageArray = [
-            UIImage(named: "1.jpg")!,
-            UIImage(named: "2.jpg")!,
-            UIImage(named: "3.jpg")!,
-            UIImage(named: "4.jpg")!,
-            UIImage(named: "5.jpg")!,
-            UIImage(named: "1.jpg")!,
-            UIImage(named: "2.jpg")!,
-            UIImage(named: "3.jpg")!,
-            UIImage(named: "4.jpg")!
+            UIImage(named: "ingre.gif")!,
+            UIImage(named: "egg2.jpg")!,
+            UIImage(named: "egg3.jpg")!,
+            UIImage(named: "egg4.jpg")!,
+            UIImage(named: "egg5-2.jpg")!,
+            UIImage(named: "egg6.jpg")!,
+            UIImage(named: "egg7.jpg")!,
+            UIImage(named: "egg8.jpg")!,
+            UIImage(named: "egg9.jpg")!,
+            UIImage(named: "egg10.jpg")!
         ]
         
     }
@@ -114,16 +117,18 @@ class CookViewController: UIViewController {
             UIImage(named: "3.jpg")!,
             UIImage(named: "4.jpg")!
         ]
+        itemTextArray = []
         
     }
     func hamburg() {
         foodTextArray = ["",""]
         foodImageArray = [UIImage(named: "1.jpg")!, UIImage(named: "2.jpg")!]
-        
+        itemTextArray = []
     }
     func omuRice() {
         foodTextArray = ["",""]
         foodImageArray = [UIImage(named: "1.jpg")!, UIImage(named: "2.jpg")!]
+        itemTextArray = []
     }
     
     @IBAction func plus() {

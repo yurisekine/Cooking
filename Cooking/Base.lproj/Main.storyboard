@@ -125,7 +125,7 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <segue destination="tqH-p0-yfo" kind="push" identifier="toCellViewController" id="Wim-XC-Vkv"/>
+                        <segue destination="tqH-p0-yfo" kind="push" identifier="toCellViewController" id="xa9-En-ydT"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0fI-DS-2tr" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -172,10 +172,9 @@
                     <navigationItem key="navigationItem" id="P3H-uf-113"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="dateLabel" destination="6fu-5j-Y2b" id="anh-X3-LQ2"/>
-                        <outlet property="imageView" destination="fEa-Ke-Tdf" id="dus-5L-3Lw"/>
-                        <outlet property="memoTextView" destination="KYu-R1-bjT" id="wge-e4-PQf"/>
-                        <outlet property="nameLabel" destination="dri-L5-TCO" id="4iE-4l-68F"/>
+                        <outlet property="imageView" destination="fEa-Ke-Tdf" id="aAJ-ae-Vdc"/>
+                        <outlet property="memoTextView" destination="KYu-R1-bjT" id="JQI-U2-WLt"/>
+                        <outlet property="nameLabel" destination="dri-L5-TCO" id="TiS-bO-gfZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="10l-ub-x9t" userLabel="First Responder" sceneMemberID="firstResponder"/>

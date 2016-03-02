@@ -62,14 +62,14 @@ class ListTableViewController: UITableViewController {
         return nameArray.count
     }
     
-    //セルでの表示
+    //セルの設定
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! ListTableViewCell
         let nowIndexPathDictionary: (AnyObject) = nameArray[indexPath.row]
 
         cell.nameLabel.text = nowIndexPathDictionary["name"] as? String
         
-        let nsData = imageArray[indexPath.row]
+        let nsData = imageArray[indexPath.row] //var
         let image = UIImage(data: nsData as! NSData)
         cell.iconImage.image = image
         
@@ -93,7 +93,13 @@ class ListTableViewController: UITableViewController {
         let nowIndexPathDictionary: (AnyObject) = nameArray[indexPath.row]
 //        let memonowIndexPathDictionary1: (AnyObject) = memoArray[indexPath.row]
         
-        selectedImage = UIImage(named: "\(imageArray[indexPath.row])")
+        let nsData = imageArray[indexPath.row] //var
+        selectedImage = UIImage(data: nsData as! NSData)
+        
+        
+//        selectedImage = UIImage(named: "\(imageArray[indexPath.row])")
+        
+        
 //        selectedName = nameArray[indexPath.row] as! String
         selectedName = nowIndexPathDictionary["name"] as? String
 //        selectedDate = dateArray[indexPath.row] as! String
@@ -102,7 +108,9 @@ class ListTableViewController: UITableViewController {
         
 //        if selectedImage != nil {
             performSegueWithIdentifier("toCellViewController", sender: nil)
-//        }
+//        } else {
+//        print("画像がありません")
+//    }
  
 
     }

@@ -530,6 +530,29 @@
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="b3q-xB-BjI">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zb2-ki-CF4">
+                                            <rect key="frame" x="200" y="369" width="140" height="140"/>
+                                            <state key="normal" title="次へ" backgroundImage="clearnext.png">
+                                                <color key="titleColor" red="0.31372549019607843" green="0.14509803921568629" blue="0.078431372549019607" alpha="1" colorSpace="calibratedRGB"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="plus" destination="RUw-vT-1Qq" eventType="touchUpInside" id="m7y-P7-uJd"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="brP-sW-OqL">
+                                            <rect key="frame" x="32" y="369" width="140" height="140"/>
+                                            <state key="normal" title="前へ" backgroundImage="clearprev.png">
+                                                <color key="titleColor" red="0.31372549019607843" green="0.14509803921568629" blue="0.078431372549019607" alpha="1" colorSpace="calibratedRGB"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="minus" destination="RUw-vT-1Qq" eventType="touchUpInside" id="9iD-eU-11i"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <connections>
+                                        <outletCollection property="gestureRecognizers" destination="XsJ-8r-LVA" appends="YES" id="ov2-4A-Qxp"/>
+                                    </connections>
                                 </view>
                                 <blurEffect style="light"/>
                             </visualEffectView>
@@ -539,9 +562,6 @@
                                 <gestureRecognizers/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="XsJ-8r-LVA" appends="YES" id="c4n-qG-v1f"/>
-                                </connections>
                             </textView>
                         </subviews>
                     </view>
@@ -567,7 +587,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xMi-4K-vDl" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="XsJ-8r-LVA">
                     <connections>
-                        <action selector="tapScreen:" destination="RUw-vT-1Qq" id="lJK-5Y-T3S"/>
+                        <action selector="tapScreen:" destination="RUw-vT-1Qq" id="xi1-90-jR1"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>

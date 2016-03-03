@@ -62,6 +62,27 @@ class memoViewController: UIViewController {
     }
     
     
+    //次へ
+    @IBAction func plus() {
+        if number < (TextViewArray.count - 1) { //7
+            number = number + 1
+            memoTextView.text = TextViewArray[Int(number - 1)]
+        }else if number == (TextViewArray.count - 1) {
+            number = number + 1
+            memoTextView.text = TextViewArray[Int(number - 1)]
+        }
+    }
+    
+    //前へ
+    @IBAction func minus() {
+        if number > 1 {
+            number = number - 1
+            memoTextView.text = TextViewArray[Int(number - 1)]
+        }
+    }
+    
+    
+    
     //決定ボタンを押されたとき
     @IBAction func memoDoneButton() {
         //メモを更新

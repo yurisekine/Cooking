@@ -86,6 +86,7 @@ class ListTableViewController: UITableViewController {
 //        cell.iconImage.image = UIImage(named:"\(imageArray[indexPath.row])")//
         
         cell.nameLabel.textColor = UIColor.brownColor()
+        
         //偶数列の色を変える
         if indexPath.row % 2 == 1 {
             cell.nameLabel.textColor = UIColor.whiteColor()

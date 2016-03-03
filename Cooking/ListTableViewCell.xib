@@ -24,6 +24,7 @@
                         <rect key="frame" x="8" y="0.0" width="90" height="89"/>
                     </imageView>
                 </subviews>
+                <color key="backgroundColor" white="1" alpha="0.55374461206896552" colorSpace="calibratedWhite"/>
             </tableViewCellContentView>
             <connections>
                 <outlet property="iconImage" destination="yMi-I9-KA1" id="5wd-G5-T8J"/>

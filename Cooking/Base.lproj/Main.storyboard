@@ -102,10 +102,14 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" id="CYo-wK-OCJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.9882352941176471" green="0.64994746457046015" blue="0.62897303383459813" alpha="1" colorSpace="calibratedRGB"/>
+                        <imageView key="tableHeaderView" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cellfood.png" id="BTP-YT-oNA">
+                            <rect key="frame" x="0.0" y="64" width="375" height="188"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="90" id="CLe-ii-NE0">
-                                <rect key="frame" x="0.0" y="92" width="375" height="90"/>
+                                <rect key="frame" x="0.0" y="280" width="375" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CLe-ii-NE0" id="hzJ-Kc-DNP">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="89"/>
@@ -613,22 +617,33 @@
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="ffu-zX-4tf">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="859"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="brownclear.png" translatesAutoresizingMaskIntoConstraints="NO" id="yId-T8-WL5">
+                                            <rect key="frame" x="12" y="34" width="121" height="57"/>
+                                        </imageView>
+                                    </subviews>
                                 </view>
                                 <blurEffect style="light"/>
                             </visualEffectView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OBq-RF-m3J">
                                 <rect key="frame" x="201" y="113" width="166" height="169"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="brownclear.png" translatesAutoresizingMaskIntoConstraints="NO" id="OPn-FA-8hj">
+                                <rect key="frame" x="12" y="304" width="135" height="57"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="clearoval2.png" translatesAutoresizingMaskIntoConstraints="NO" id="zHv-Md-Rwx">
+                                <rect key="frame" x="203" y="32" width="174" height="70"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="makeLabel" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lqR-0E-oPc">
                                 <rect key="frame" x="20" y="361" width="335" height="254"/>
-                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="0.5718480603448276" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="foodlabel" textAlignment="justified" lineBreakMode="headTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="URd-Re-2cp">
                                 <rect key="frame" x="20" y="113" width="172" height="189"/>
-                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="0.58084590517241375" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -640,35 +655,33 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="作り方" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Jb-bD-LQk">
-                                <rect key="frame" x="20" y="310" width="119" height="45"/>
-                                <color key="backgroundColor" red="0.92941176470588238" green="0.94509803921568625" blue="0.68235294117647061" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="73" y="310" width="66" height="45"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.31372549020000001" green="0.1450980392" blue="0.078431372550000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="材料" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4fl-Ad-iYP">
-                                <rect key="frame" x="20" y="40" width="97" height="43"/>
-                                <color key="backgroundColor" red="0.92941176470588238" green="0.94509803921568625" blue="0.68235294117647061" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="73" y="40" width="44" height="43"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.31372549020000001" green="0.1450980392" blue="0.078431372550000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bawl.gif" translatesAutoresizingMaskIntoConstraints="NO" id="1zk-6t-VIX">
                                 <rect key="frame" x="20" y="44" width="57" height="43"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fry.gif" translatesAutoresizingMaskIntoConstraints="NO" id="ebd-i8-DO5">
-                                <rect key="frame" x="20" y="307" width="54" height="52"/>
+                                <rect key="frame" x="20" y="303" width="54" height="52"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="人数を選択▼" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gbr-1J-sQo">
                                 <rect key="frame" x="253" y="53" width="114" height="33"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.31372549020000001" green="0.1450980392" blue="0.078431372550000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="kiritori.gif" translatesAutoresizingMaskIntoConstraints="NO" id="SSj-6K-aAj">
                                 <rect key="frame" x="146" y="321" width="220" height="26"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="person.gif" translatesAutoresizingMaskIntoConstraints="NO" id="9FL-Qg-aLq">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="whiteperson.png" translatesAutoresizingMaskIntoConstraints="NO" id="9FL-Qg-aLq">
                                 <rect key="frame" x="221" y="44" width="34" height="42"/>
                             </imageView>
                         </subviews>
@@ -696,11 +709,13 @@
         <image name="bawl.gif" width="749" height="382"/>
         <image name="boader.jpg" width="768" height="768"/>
         <image name="brownclear.png" width="1752" height="1024"/>
+        <image name="cellfood.png" width="576" height="512"/>
         <image name="clearbook.png" width="1024" height="1024"/>
         <image name="clearcook.png" width="1024" height="1024"/>
         <image name="clearmemo.png" width="1024" height="1024"/>
         <image name="clearnext.png" width="1024" height="1024"/>
         <image name="clearoval.png" width="1752" height="1024"/>
+        <image name="clearoval2.png" width="1768" height="1058"/>
         <image name="clearprev.png" width="1024" height="1024"/>
         <image name="clearspfolk.png" width="1024" height="1024"/>
         <image name="colochoco.jpg" width="501" height="615"/>
@@ -711,9 +726,9 @@
         <image name="fry.gif" width="672" height="589"/>
         <image name="kiritori.gif" width="1868" height="157"/>
         <image name="owan.gif" width="714" height="396"/>
-        <image name="person.gif" width="860" height="1024"/>
         <image name="stripe.jpg" width="1920" height="1200"/>
         <image name="timer.png" width="1024" height="1024"/>
         <image name="up.png" width="1752" height="925"/>
+        <image name="whiteperson.png" width="904" height="1024"/>
     </resources>
 </document>

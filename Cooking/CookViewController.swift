@@ -13,6 +13,7 @@ class CookViewController: UIViewController {
     @IBOutlet var foodContentsText: UILabel!
     @IBOutlet var itemText: UILabel!
     @IBOutlet var processText: UILabel!
+    @IBOutlet var allprocessText: UILabel!
     @IBOutlet var foodContentsImage: UIImageView!
     @IBOutlet var processBar: UIProgressView!
 
@@ -46,7 +47,8 @@ class CookViewController: UIViewController {
         
         processBar.transform = CGAffineTransformMakeScale(2.0, 3.0)
         processBar.progress = number / Float(foodTextArray.count)
-        processText.text = "\(Int(number)) / \(foodTextArray.count)"
+        processText.text = "\(Int(number))"
+        allprocessText.text = "/ \(foodTextArray.count)"
         
         // Do any additional setup after loading the view.
     }
@@ -140,14 +142,14 @@ class CookViewController: UIViewController {
             foodContentsImage.image = foodImageArray[Int(number - 1)]
             itemText.text = itemTextArray[Int(number - 1)]
             processBar.setProgress(number / Float(foodTextArray.count) , animated: true)
-            processText.text = "\(Int(number)) / \(foodTextArray.count)"
+            processText.text = "\(Int(number))"
         }else if number == Float(foodTextArray.count - 1) {
             number = number + 1
             foodContentsText.text = foodTextArray[Int(number - 1)]
             foodContentsImage.image = foodImageArray[Int(number - 1)]
             itemText.text = itemTextArray[Int(number - 1)]
             processBar.setProgress(number / Float(foodTextArray.count) , animated: true)
-            processText.text = "\(Int(number)) / \(foodTextArray.count)"
+            processText.text = "\(Int(number))"
         }
     }
     
@@ -158,7 +160,7 @@ class CookViewController: UIViewController {
             foodContentsImage.image = foodImageArray[Int(number - 1)]
             itemText.text = itemTextArray[Int(number - 1)]
             processBar.setProgress(number / Float(foodTextArray.count) , animated: true)
-            processText.text = "\(Int(number)) / \(foodTextArray.count)"
+            processText.text = "\(Int(number))"
         }
     }
     

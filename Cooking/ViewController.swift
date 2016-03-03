@@ -13,6 +13,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     @IBOutlet var menuPickerView: UIPickerView!
     var menuImageArray: [UIImage]!
+//    var selectedLabel: UILabel!
     
     let menuArray = [
         "玉子焼き",
@@ -26,6 +27,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         // Do any additional setup after loading the view, typically from a nib.
         menuPickerView.delegate = self
         menuPickerView.dataSource = self
+        
+        //初期選択させる
+//        self.selectedLabel = menuPickerView.viewForRow(0, forComponent: 0) as! UILabel
         
         menuImageArray = [
                 UIImage(named: "egg9.jpg")!,

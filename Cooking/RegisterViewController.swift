@@ -34,6 +34,9 @@ class RegisterViewController: UIViewController, UINavigationControllerDelegate, 
         nameTextField.delegate = self
         memoView.delegate = self
         
+        
+        nameTextField.text = "料理名"
+        
         if saveData.arrayForKey("NAME") != nil {
             nameArray = saveData.arrayForKey("NAME")!
         }
@@ -183,7 +186,7 @@ class RegisterViewController: UIViewController, UINavigationControllerDelegate, 
                 )
             )
             self.presentViewController(alert, animated: true, completion: nil)
-            nameTextField.text = ""
+            nameTextField.text = "料理名"
             photoImageView.image = nil
             memoView.text = "メモ"
             

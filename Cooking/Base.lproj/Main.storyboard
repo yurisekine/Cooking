@@ -237,7 +237,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="boader.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="bKl-DQ-Wu5">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="color3.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="bKl-DQ-Wu5">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E8Y-ez-WJJ">
@@ -707,7 +707,6 @@
     </scenes>
     <resources>
         <image name="bawl.gif" width="749" height="382"/>
-        <image name="boader.jpg" width="768" height="768"/>
         <image name="brownclear.png" width="1752" height="1024"/>
         <image name="cellfood.png" width="576" height="512"/>
         <image name="clearbook.png" width="1024" height="1024"/>

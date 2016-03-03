@@ -10,6 +10,7 @@ import UIKit
 
 class RegisterViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextFieldDelegate, UITextViewDelegate{
     
+    //料理名、画像、メモ、日付の配列
     var nameArray: [AnyObject] = []
     var imageArray: [AnyObject] = []
     var memoArray: [AnyObject] = []
@@ -49,6 +50,10 @@ class RegisterViewController: UIViewController, UINavigationControllerDelegate, 
         if saveData.arrayForKey("MEMO") != nil {
             memoArray = saveData.arrayForKey("MEMO")!
         }
+        
+        //デートピッカーの背景色設定
+        datePicker.backgroundColor = UIColor.whiteColor()
+        datePicker.layer.opacity = 0.5
 
     }
     
@@ -62,11 +67,6 @@ class RegisterViewController: UIViewController, UINavigationControllerDelegate, 
     @IBAction func tapScreen(sender: UITapGestureRecognizer) {
         self.view.endEditing(true)
     }
-    
-   /* func textViewShouldEndEditing(textView: UITextView) -> Bool {
-        textView.resignFirstResponder()
-        return true
-    }意味なかった*/
     
     //カメラ、アルバムの呼び出しメソッド(カメラorアルバムのソースタイプが引数)
     func precentPickerController(sourceType: UIImagePickerControllerSourceType) {
@@ -188,7 +188,7 @@ class RegisterViewController: UIViewController, UINavigationControllerDelegate, 
             self.presentViewController(alert, animated: true, completion: nil)
             nameTextField.text = "料理名"
             photoImageView.image = nil
-            memoView.text = "メモ"
+            memoView.text = "●memo●"
             
         
         }

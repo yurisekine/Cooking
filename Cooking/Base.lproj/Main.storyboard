@@ -5,6 +5,14 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="uzura.ttf">
+            <string>uzura_font</string>
+            <string>uzura_font</string>
+            <string>uzura_font</string>
+            <string>uzura_font</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--Navigation Controller-->
         <scene sceneID="0M8-I7-Ku0">
@@ -168,30 +176,47 @@
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="llE-Zg-3ZT">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fEa-Ke-Tdf">
+                                            <rect key="frame" x="52" y="132" width="270" height="270"/>
+                                        </imageView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pinkt.png" translatesAutoresizingMaskIntoConstraints="NO" id="ypa-9U-3Gj">
+                                            <rect key="frame" x="32" y="338" width="75" height="75"/>
+                                        </imageView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bluet.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ce0-bR-kLb">
+                                            <rect key="frame" x="32" y="121" width="75" height="75"/>
+                                        </imageView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="green.png" translatesAutoresizingMaskIntoConstraints="NO" id="rSf-Bm-STD">
+                                            <rect key="frame" x="269" y="338" width="75" height="75"/>
+                                        </imageView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="oranget.png" translatesAutoresizingMaskIntoConstraints="NO" id="Hgs-ty-xgl">
+                                            <rect key="frame" x="269" y="123" width="75" height="75"/>
+                                        </imageView>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="メモ" textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KYu-R1-bjT">
+                                            <rect key="frame" x="13" y="465" width="265" height="167"/>
+                                            <color key="backgroundColor" white="1" alpha="0.62516163793103452" colorSpace="calibratedWhite"/>
+                                            <color key="textColor" red="0.31372549020000001" green="0.1450980392" blue="0.078431372550000003" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="fontDescription" name="uzura_font" family="uzura_font" pointSize="20"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        </textView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="日付" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6fu-5j-Y2b">
+                                            <rect key="frame" x="193" y="416" width="159" height="76"/>
+                                            <color key="backgroundColor" red="0.98737879654441874" green="0.99316676976262075" blue="1" alpha="0.53000000000000003" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="fontDescription" name="uzura_font" family="uzura_font" pointSize="24"/>
+                                            <color key="textColor" red="0.31372549020000001" green="0.1450980392" blue="0.078431372550000003" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="料理名" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dri-L5-TCO">
+                                            <rect key="frame" x="48" y="74" width="279" height="50"/>
+                                            <color key="backgroundColor" red="0.98737879654441874" green="0.99316676976262075" blue="1" alpha="0.53000000000000003" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="fontDescription" name="uzura_font" family="uzura_font" pointSize="25"/>
+                                            <color key="textColor" red="0.31372549020000001" green="0.1450980392" blue="0.078431372550000003" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </view>
                                 <blurEffect style="light"/>
                             </visualEffectView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="料理名" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dri-L5-TCO">
-                                <rect key="frame" x="48" y="70" width="279" height="50"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fEa-Ke-Tdf">
-                                <rect key="frame" x="23" y="124" width="328" height="271"/>
-                            </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="メモ" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KYu-R1-bjT">
-                                <rect key="frame" x="104" y="475" width="240" height="128"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="日付" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6fu-5j-Y2b">
-                                <rect key="frame" x="20" y="401" width="159" height="66"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                     </view>
                     <navigationItem key="navigationItem" id="P3H-uf-113"/>
@@ -247,17 +272,31 @@
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="●memo●" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="wqC-TV-bqx">
-                                            <rect key="frame" x="35" y="139" width="304" height="128"/>
+                                            <rect key="frame" x="35" y="136" width="304" height="128"/>
                                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.55255926724137927" colorSpace="calibratedRGB"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         </textView>
+                                        <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="yFb-hN-zPB">
+                                            <rect key="frame" x="0.0" y="506" width="375" height="126"/>
+                                            <color key="backgroundColor" red="0.90158045620856997" green="0.92473716577540699" blue="1" alpha="0.53978987068965523" colorSpace="calibratedRGB"/>
+                                            <date key="date" timeIntervalSinceReferenceDate="478289471.43266797">
+                                                <!--2016-02-27 18:11:11 +0000-->
+                                            </date>
+                                            <date key="minimumDate" timeIntervalSinceReferenceDate="441802800">
+                                                <!--2015-01-01 11:00:00 +0000-->
+                                            </date>
+                                            <date key="maximumDate" timeIntervalSinceReferenceDate="946638000">
+                                                <!--2030-12-31 11:00:00 +0000-->
+                                            </date>
+                                            <locale key="locale" localeIdentifier="ja_JP"/>
+                                        </datePicker>
                                     </subviews>
                                 </view>
                                 <blurEffect style="light"/>
                             </visualEffectView>
                             <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zg2-G2-8MX">
-                                <rect key="frame" x="66" y="275" width="241" height="215"/>
+                                <rect key="frame" x="67" y="275" width="241" height="215"/>
                                 <color key="backgroundColor" red="0.80000001190000003" green="0.46499693577568585" blue="0.4223293744293462" alpha="0.58028017241379315" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="タップして、画像を取得できます">
                                     <color key="titleColor" red="1" green="0.3503444656185184" blue="0.33955563330404437" alpha="0.92623922413793103" colorSpace="calibratedRGB"/>
@@ -266,28 +305,26 @@
                                     <action selector="selectButton:" destination="OW8-H6-MnD" eventType="touchUpInside" id="urK-Au-QSj"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8iS-SD-2m8">
+                                <rect key="frame" x="67" y="275" width="241" height="216"/>
+                            </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dpX-AS-3Qw">
                                 <rect key="frame" x="35" y="101" width="304" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8iS-SD-2m8">
-                                <rect key="frame" x="67" y="278" width="241" height="209"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bluet.png" translatesAutoresizingMaskIntoConstraints="NO" id="osp-Rs-8hb">
+                                <rect key="frame" x="46" y="263" width="75" height="75"/>
                             </imageView>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="yFb-hN-zPB">
-                                <rect key="frame" x="0.0" y="503" width="375" height="126"/>
-                                <color key="backgroundColor" red="0.90158045620856997" green="0.92473716577540699" blue="1" alpha="0.53978987068965523" colorSpace="calibratedRGB"/>
-                                <date key="date" timeIntervalSinceReferenceDate="478289471.43266797">
-                                    <!--2016-02-27 18:11:11 +0000-->
-                                </date>
-                                <date key="minimumDate" timeIntervalSinceReferenceDate="441802800">
-                                    <!--2015-01-01 11:00:00 +0000-->
-                                </date>
-                                <date key="maximumDate" timeIntervalSinceReferenceDate="946638000">
-                                    <!--2030-12-31 11:00:00 +0000-->
-                                </date>
-                                <locale key="locale" localeIdentifier="ja_JP"/>
-                            </datePicker>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="oranget.png" translatesAutoresizingMaskIntoConstraints="NO" id="RBT-x7-xUy">
+                                <rect key="frame" x="254" y="263" width="75" height="75"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pinkt.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ojb-9o-O6l">
+                                <rect key="frame" x="46" y="434" width="75" height="75"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="green.png" translatesAutoresizingMaskIntoConstraints="NO" id="B70-Es-pGA">
+                                <rect key="frame" x="254" y="434" width="75" height="75"/>
+                            </imageView>
                         </subviews>
                         <gestureRecognizers/>
                         <connections>
@@ -338,6 +375,11 @@
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="IXd-X4-pqz">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="608"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="frame1.png" translatesAutoresizingMaskIntoConstraints="NO" id="Nfz-sv-36C">
+                                            <rect key="frame" x="-22" y="112" width="418" height="344"/>
+                                        </imageView>
+                                    </subviews>
                                     <color key="backgroundColor" red="0.81176470588235294" green="0.59170895357410136" blue="0.47035758965984525" alpha="0.51179956896551726" colorSpace="calibratedRGB"/>
                                     <color key="tintColor" red="0.81176470588235294" green="0.59170895357410136" blue="0.47035758965984525" alpha="0.48999999999999999" colorSpace="calibratedRGB"/>
                                 </view>
@@ -353,9 +395,6 @@
                                     <segue destination="n9Q-ST-yJu" kind="show" identifier="all" id="Ukn-HX-eUd"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P8A-lh-Voo">
-                                <rect key="frame" x="32" y="199" width="311" height="287"/>
-                            </imageView>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e58-PT-3vK">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                 <items>
@@ -396,6 +435,9 @@
                                 <color key="textColor" red="0.30196078431372547" green="0.14509803921568629" blue="0.074509803921568626" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P8A-lh-Voo">
+                                <rect key="frame" x="66" y="227" width="242" height="242"/>
+                            </imageView>
                         </subviews>
                     </view>
                     <navigationItem key="navigationItem" id="5Ot-Rg-ht8"/>
@@ -452,6 +494,21 @@
                                             <color key="textColor" red="0.29803921570000003" green="0.1450980392" blue="0.074509803920000006" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IU1-A5-6Gn">
+                                            <rect key="frame" x="82" y="225" width="210" height="210"/>
+                                        </imageView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bluet.png" translatesAutoresizingMaskIntoConstraints="NO" id="X46-Ce-jq9">
+                                            <rect key="frame" x="50" y="213" width="75" height="75"/>
+                                        </imageView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="oranget.png" translatesAutoresizingMaskIntoConstraints="NO" id="Rpn-FU-hTV">
+                                            <rect key="frame" x="248" y="200" width="75" height="75"/>
+                                        </imageView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pinkt.png" translatesAutoresizingMaskIntoConstraints="NO" id="xqd-vj-fqX">
+                                            <rect key="frame" x="38" y="377" width="75" height="75"/>
+                                        </imageView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="green.png" translatesAutoresizingMaskIntoConstraints="NO" id="9Rl-lV-2ND">
+                                            <rect key="frame" x="248" y="369" width="75" height="75"/>
+                                        </imageView>
                                     </subviews>
                                     <color key="backgroundColor" red="0.81176470588235294" green="0.59170895357410136" blue="0.47035758965984525" alpha="0.48999999999999999" colorSpace="calibratedRGB"/>
                                 </view>
@@ -475,22 +532,19 @@
                                     <action selector="minus" destination="qvV-OD-Afk" eventType="touchUpInside" id="HMN-fk-LsB"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IU1-A5-6Gn">
-                                <rect key="frame" x="20" y="291" width="335" height="209"/>
-                            </imageView>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="1" translatesAutoresizingMaskIntoConstraints="NO" id="tDw-VR-15L">
                                 <rect key="frame" x="112" y="77" width="150" height="2"/>
                                 <color key="tintColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                             </progressView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="down.png" translatesAutoresizingMaskIntoConstraints="NO" id="bLh-ky-PwO">
+                                <rect key="frame" x="9" y="237" width="357" height="46"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="必要なもの" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z6a-7v-9fF">
                                 <rect key="frame" x="24" y="242" width="329" height="35"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.29803921570000003" green="0.1450980392" blue="0.074509803920000006" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="down.png" translatesAutoresizingMaskIntoConstraints="NO" id="bLh-ky-PwO">
-                                <rect key="frame" x="9" y="237" width="357" height="46"/>
-                            </imageView>
                         </subviews>
                     </view>
                     <navigationItem key="navigationItem" id="pef-a7-CkR">
@@ -564,9 +618,12 @@
                                 <rect key="frame" x="33" y="97" width="308" height="256"/>
                                 <color key="backgroundColor" red="0.94509803921568625" green="0.94509803921568625" blue="0.94509803921568625" alpha="0.54762931034482754" colorSpace="calibratedRGB"/>
                                 <gestureRecognizers/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="uzura_font" family="uzura_font" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="greent.png" translatesAutoresizingMaskIntoConstraints="NO" id="bPn-fH-Ny6">
+                                <rect key="frame" x="284" y="80" width="80" height="80"/>
+                            </imageView>
                         </subviews>
                     </view>
                     <navigationItem key="navigationItem" id="2hm-xO-8oi">
@@ -707,6 +764,7 @@
     </scenes>
     <resources>
         <image name="bawl.gif" width="749" height="382"/>
+        <image name="bluet.png" width="716" height="688"/>
         <image name="brownclear.png" width="1752" height="1024"/>
         <image name="cellfood.png" width="576" height="512"/>
         <image name="clearbook.png" width="1024" height="1024"/>
@@ -722,9 +780,14 @@
         <image name="color4.jpg" width="500" height="375"/>
         <image name="color7.jpg" width="640" height="960"/>
         <image name="down.png" width="1752" height="281"/>
+        <image name="frame1.png" width="1827" height="1828"/>
         <image name="fry.gif" width="672" height="589"/>
+        <image name="green.png" width="716" height="688"/>
+        <image name="greent.png" width="716" height="688"/>
         <image name="kiritori.gif" width="1868" height="157"/>
+        <image name="oranget.png" width="716" height="688"/>
         <image name="owan.gif" width="714" height="396"/>
+        <image name="pinkt.png" width="716" height="688"/>
         <image name="stripe.jpg" width="1920" height="1200"/>
         <image name="timer.png" width="1024" height="1024"/>
         <image name="up.png" width="1752" height="925"/>

@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		61446894427C45B5441FF102 /* Pods_Cooking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9486A963197C16E23A754BFA /* Pods_Cooking.framework */; };
+		D003101A1C89590D00ED2B5B /* frame1.png in Resources */ = {isa = PBXBuildFile; fileRef = D00310191C89590D00ED2B5B /* frame1.png */; };
+		D003101F1C8961D100ED2B5B /* Rafale BG.otf in Resources */ = {isa = PBXBuildFile; fileRef = D003101E1C8961D100ED2B5B /* Rafale BG.otf */; };
+		D00310251C89629E00ED2B5B /* uzura.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D00310241C89629E00ED2B5B /* uzura.ttf */; };
 		D01B8E681C793E1D00A63E3E /* CookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01B8E671C793E1D00A63E3E /* CookViewController.swift */; };
 		D0386F2B1C79FF7000329359 /* omu.gif in Resources */ = {isa = PBXBuildFile; fileRef = D0386F2A1C79FF7000329359 /* omu.gif */; };
 		D0386F2D1C79FF7800329359 /* han.gif in Resources */ = {isa = PBXBuildFile; fileRef = D0386F2C1C79FF7700329359 /* han.gif */; };
@@ -80,6 +83,13 @@
 		D0F87C3D1C88B38B000A1BBC /* whiteperson.png in Resources */ = {isa = PBXBuildFile; fileRef = D0F87C3C1C88B38A000A1BBC /* whiteperson.png */; };
 		D0F87C3F1C88B757000A1BBC /* clearoval2.png in Resources */ = {isa = PBXBuildFile; fileRef = D0F87C3E1C88B757000A1BBC /* clearoval2.png */; };
 		D0F87C411C88BDB3000A1BBC /* cellfood.png in Resources */ = {isa = PBXBuildFile; fileRef = D0F87C401C88BDB3000A1BBC /* cellfood.png */; };
+		D0F87C441C88C66A000A1BBC /* waku1.png in Resources */ = {isa = PBXBuildFile; fileRef = D0F87C421C88C66A000A1BBC /* waku1.png */; };
+		D0F87C451C88C66A000A1BBC /* waku2.png in Resources */ = {isa = PBXBuildFile; fileRef = D0F87C431C88C66A000A1BBC /* waku2.png */; };
+		D0F87C4A1C88CCB2000A1BBC /* bluet.png in Resources */ = {isa = PBXBuildFile; fileRef = D0F87C461C88CCB2000A1BBC /* bluet.png */; };
+		D0F87C4B1C88CCB2000A1BBC /* greent.png in Resources */ = {isa = PBXBuildFile; fileRef = D0F87C471C88CCB2000A1BBC /* greent.png */; };
+		D0F87C4C1C88CCB2000A1BBC /* oranget.png in Resources */ = {isa = PBXBuildFile; fileRef = D0F87C481C88CCB2000A1BBC /* oranget.png */; };
+		D0F87C4D1C88CCB2000A1BBC /* pinkt.png in Resources */ = {isa = PBXBuildFile; fileRef = D0F87C491C88CCB2000A1BBC /* pinkt.png */; };
+		D0F87C4F1C88CE4F000A1BBC /* green.png in Resources */ = {isa = PBXBuildFile; fileRef = D0F87C4E1C88CE4F000A1BBC /* green.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +113,9 @@
 		2EA3CA0C062E41B482DA3871 /* Pods-Cooking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cooking.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cooking/Pods-Cooking.release.xcconfig"; sourceTree = "<group>"; };
 		6FCA24F379F86F82F2A3F7B9 /* Pods-Cooking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cooking.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Cooking/Pods-Cooking.debug.xcconfig"; sourceTree = "<group>"; };
 		9486A963197C16E23A754BFA /* Pods_Cooking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cooking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D00310191C89590D00ED2B5B /* frame1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = frame1.png; sourceTree = "<group>"; };
+		D003101E1C8961D100ED2B5B /* Rafale BG.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rafale BG.otf"; sourceTree = "<group>"; };
+		D00310241C89629E00ED2B5B /* uzura.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = uzura.ttf; sourceTree = "<group>"; };
 		D01B8E671C793E1D00A63E3E /* CookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CookViewController.swift; sourceTree = "<group>"; };
 		D0386F2A1C79FF7000329359 /* omu.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = omu.gif; sourceTree = "<group>"; };
 		D0386F2C1C79FF7700329359 /* han.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = han.gif; sourceTree = "<group>"; };
@@ -181,6 +194,13 @@
 		D0F87C3C1C88B38A000A1BBC /* whiteperson.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whiteperson.png; sourceTree = "<group>"; };
 		D0F87C3E1C88B757000A1BBC /* clearoval2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clearoval2.png; sourceTree = "<group>"; };
 		D0F87C401C88BDB3000A1BBC /* cellfood.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cellfood.png; sourceTree = "<group>"; };
+		D0F87C421C88C66A000A1BBC /* waku1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = waku1.png; sourceTree = "<group>"; };
+		D0F87C431C88C66A000A1BBC /* waku2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = waku2.png; sourceTree = "<group>"; };
+		D0F87C461C88CCB2000A1BBC /* bluet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bluet.png; sourceTree = "<group>"; };
+		D0F87C471C88CCB2000A1BBC /* greent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = greent.png; sourceTree = "<group>"; };
+		D0F87C481C88CCB2000A1BBC /* oranget.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = oranget.png; sourceTree = "<group>"; };
+		D0F87C491C88CCB2000A1BBC /* pinkt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pinkt.png; sourceTree = "<group>"; };
+		D0F87C4E1C88CE4F000A1BBC /* green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = green.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -217,9 +237,26 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D003101D1C89601600ED2B5B /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				D00310241C89629E00ED2B5B /* uzura.ttf */,
+				D003101E1C8961D100ED2B5B /* Rafale BG.otf */,
+			);
+			name = Font;
+			sourceTree = "<group>";
+		};
 		D089FA9E1C86060F00236FEB /* image */ = {
 			isa = PBXGroup;
 			children = (
+				D00310191C89590D00ED2B5B /* frame1.png */,
+				D0F87C4E1C88CE4F000A1BBC /* green.png */,
+				D0F87C461C88CCB2000A1BBC /* bluet.png */,
+				D0F87C471C88CCB2000A1BBC /* greent.png */,
+				D0F87C481C88CCB2000A1BBC /* oranget.png */,
+				D0F87C491C88CCB2000A1BBC /* pinkt.png */,
+				D0F87C421C88C66A000A1BBC /* waku1.png */,
+				D0F87C431C88C66A000A1BBC /* waku2.png */,
 				D0F87C401C88BDB3000A1BBC /* cellfood.png */,
 				D0F87C3E1C88B757000A1BBC /* clearoval2.png */,
 				D0F87C3C1C88B38A000A1BBC /* whiteperson.png */,
@@ -305,6 +342,7 @@
 		D0A2216A1C759AAB006E2F2B /* Cooking */ = {
 			isa = PBXGroup;
 			children = (
+				D003101D1C89601600ED2B5B /* Font */,
 				D089FA9E1C86060F00236FEB /* image */,
 				D0A2216B1C759AAB006E2F2B /* AppDelegate.swift */,
 				D0A2216D1C759AAB006E2F2B /* ViewController.swift */,
@@ -464,12 +502,15 @@
 			files = (
 				D089FAB31C86246700236FEB /* egg5-2.jpg in Resources */,
 				D0826A091C889E74004BD9DE /* color3.jpg in Resources */,
+				D0F87C4B1C88CCB2000A1BBC /* greent.png in Resources */,
 				D089FABA1C87166A00236FEB /* clear.gif in Resources */,
 				D0F87C411C88BDB3000A1BBC /* cellfood.png in Resources */,
 				D089FAB71C86246700236FEB /* egg9.jpg in Resources */,
 				D08269F91C88760A004BD9DE /* brownclear.png in Resources */,
 				D089FB2B1C8758FD00236FEB /* clearcook.png in Resources */,
 				D0386F3A1C7A215F00329359 /* 4.jpg in Resources */,
+				D003101A1C89590D00ED2B5B /* frame1.png in Resources */,
+				D003101F1C8961D100ED2B5B /* Rafale BG.otf in Resources */,
 				D089FAB11C86246700236FEB /* egg4.jpg in Resources */,
 				D089FB1B1C87282500236FEB /* topback2.gif in Resources */,
 				D0386F391C7A215F00329359 /* 3.jpg in Resources */,
@@ -478,9 +519,13 @@
 				D0826A041C888330004BD9DE /* down.png in Resources */,
 				D0826A0C1C88A2AE004BD9DE /* color5.jpg in Resources */,
 				D0386F2D1C79FF7800329359 /* han.gif in Resources */,
+				D0F87C451C88C66A000A1BBC /* waku2.png in Resources */,
 				D097968F1C855BB900E60E18 /* fry.gif in Resources */,
 				D09792DB1C84F46C00E60E18 /* person.gif in Resources */,
+				D0F87C4D1C88CCB2000A1BBC /* pinkt.png in Resources */,
 				D089FAB21C86246700236FEB /* egg5-1.jpg in Resources */,
+				D00310251C89629E00ED2B5B /* uzura.ttf in Resources */,
+				D0F87C4A1C88CCB2000A1BBC /* bluet.png in Resources */,
 				D08269F51C886F55004BD9DE /* stripe.jpg in Resources */,
 				D08F7B861C79A2B100A62AED /* meatpotato.gif in Resources */,
 				D089FB291C8757DE00236FEB /* clearbook.png in Resources */,
@@ -492,12 +537,15 @@
 				D089FABC1C87251100236FEB /* topback.gif in Resources */,
 				D0386F381C7A215F00329359 /* 2.jpg in Resources */,
 				D08269F01C885D7F004BD9DE /* colochoco.jpg in Resources */,
+				D0F87C4F1C88CE4F000A1BBC /* green.png in Resources */,
 				D09786471C845A0000E60E18 /* sandtimer.gif in Resources */,
 				D0A221761C759AAB006E2F2B /* LaunchScreen.storyboard in Resources */,
 				D0826A0A1C889E74004BD9DE /* color4.jpg in Resources */,
 				D09792D71C847F2E00E60E18 /* ListTableViewCell.xib in Resources */,
 				D089FA9D1C8605E000236FEB /* kiritori.gif in Resources */,
 				D0826A121C88A431004BD9DE /* color8.jpg in Resources */,
+				D0F87C441C88C66A000A1BBC /* waku1.png in Resources */,
+				D0F87C4C1C88CCB2000A1BBC /* oranget.png in Resources */,
 				D08269FA1C88760A004BD9DE /* clearoval.png in Resources */,
 				D09792DF1C855A2800E60E18 /* bawl.gif in Resources */,
 				D0F87C3F1C88B757000A1BBC /* clearoval2.png in Resources */,

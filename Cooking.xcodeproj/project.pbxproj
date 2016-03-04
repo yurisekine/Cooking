@@ -11,6 +11,8 @@
 		D003101A1C89590D00ED2B5B /* frame1.png in Resources */ = {isa = PBXBuildFile; fileRef = D00310191C89590D00ED2B5B /* frame1.png */; };
 		D003101F1C8961D100ED2B5B /* Rafale BG.otf in Resources */ = {isa = PBXBuildFile; fileRef = D003101E1C8961D100ED2B5B /* Rafale BG.otf */; };
 		D00310251C89629E00ED2B5B /* uzura.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D00310241C89629E00ED2B5B /* uzura.ttf */; };
+		D00310391C898B3B00ED2B5B /* myReco.png in Resources */ = {isa = PBXBuildFile; fileRef = D00310381C898B3B00ED2B5B /* myReco.png */; };
+		D003103B1C89AEDB00ED2B5B /* closecook.png in Resources */ = {isa = PBXBuildFile; fileRef = D003103A1C89AEDB00ED2B5B /* closecook.png */; };
 		D01B8E681C793E1D00A63E3E /* CookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01B8E671C793E1D00A63E3E /* CookViewController.swift */; };
 		D0386F2B1C79FF7000329359 /* omu.gif in Resources */ = {isa = PBXBuildFile; fileRef = D0386F2A1C79FF7000329359 /* omu.gif */; };
 		D0386F2D1C79FF7800329359 /* han.gif in Resources */ = {isa = PBXBuildFile; fileRef = D0386F2C1C79FF7700329359 /* han.gif */; };
@@ -116,6 +118,8 @@
 		D00310191C89590D00ED2B5B /* frame1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = frame1.png; sourceTree = "<group>"; };
 		D003101E1C8961D100ED2B5B /* Rafale BG.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rafale BG.otf"; sourceTree = "<group>"; };
 		D00310241C89629E00ED2B5B /* uzura.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = uzura.ttf; sourceTree = "<group>"; };
+		D00310381C898B3B00ED2B5B /* myReco.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = myReco.png; sourceTree = "<group>"; };
+		D003103A1C89AEDB00ED2B5B /* closecook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = closecook.png; sourceTree = "<group>"; };
 		D01B8E671C793E1D00A63E3E /* CookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CookViewController.swift; sourceTree = "<group>"; };
 		D0386F2A1C79FF7000329359 /* omu.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = omu.gif; sourceTree = "<group>"; };
 		D0386F2C1C79FF7700329359 /* han.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = han.gif; sourceTree = "<group>"; };
@@ -249,6 +253,8 @@
 		D089FA9E1C86060F00236FEB /* image */ = {
 			isa = PBXGroup;
 			children = (
+				D003103A1C89AEDB00ED2B5B /* closecook.png */,
+				D00310381C898B3B00ED2B5B /* myReco.png */,
 				D00310191C89590D00ED2B5B /* frame1.png */,
 				D0F87C4E1C88CE4F000A1BBC /* green.png */,
 				D0F87C461C88CCB2000A1BBC /* bluet.png */,
@@ -527,6 +533,7 @@
 				D00310251C89629E00ED2B5B /* uzura.ttf in Resources */,
 				D0F87C4A1C88CCB2000A1BBC /* bluet.png in Resources */,
 				D08269F51C886F55004BD9DE /* stripe.jpg in Resources */,
+				D00310391C898B3B00ED2B5B /* myReco.png in Resources */,
 				D08F7B861C79A2B100A62AED /* meatpotato.gif in Resources */,
 				D089FB291C8757DE00236FEB /* clearbook.png in Resources */,
 				D089FB2E1C875A5700236FEB /* clearnext.png in Resources */,
@@ -565,6 +572,7 @@
 				D0386F371C7A215F00329359 /* 1.jpg in Resources */,
 				D0386F2B1C79FF7000329359 /* omu.gif in Resources */,
 				D089FAB01C86246700236FEB /* egg3.jpg in Resources */,
+				D003103B1C89AEDB00ED2B5B /* closecook.png in Resources */,
 				D097864C1C84711700E60E18 /* owan.gif in Resources */,
 				D089FAB51C86246700236FEB /* egg7.jpg in Resources */,
 				D089FB311C875AD800236FEB /* clearprev.png in Resources */,

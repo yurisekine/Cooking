@@ -32,8 +32,6 @@ class CookViewController: UIViewController {
             Egg()
         } else if foodnumber == 1 {
             MeatPotato()
-        } else if foodnumber == 2 {
-            hamburg()
         } else if foodnumber == 3{
             omuRice()
         } else {
@@ -124,15 +122,11 @@ class CookViewController: UIViewController {
         itemTextArray = []
         
     }
-    func hamburg() {
-        foodTextArray = ["",""]
-        foodImageArray = [UIImage(named: "1.jpg")!, UIImage(named: "2.jpg")!]
-        itemTextArray = []
-    }
+    
     func omuRice() {
-        foodTextArray = ["",""]
+        foodTextArray = ["玉ねぎ、鶏もも肉を切る",""]
         foodImageArray = [UIImage(named: "1.jpg")!, UIImage(named: "2.jpg")!]
-        itemTextArray = []
+        itemTextArray = ["玉ねぎ、鶏もも肉、包丁、まな板","",""]
     }
     
     @IBAction func plus() {

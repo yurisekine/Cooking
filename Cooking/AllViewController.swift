@@ -31,8 +31,6 @@ class AllViewController: UIViewController, UIActionSheetDelegate {
             Egg()
         } else if number == 1 {
             MeatPotato()
-        } else if number == 2 {
-            hamburg()
         } else if number == 3{
             omuRice()
         } else {
@@ -75,7 +73,8 @@ class AllViewController: UIViewController, UIActionSheetDelegate {
 //        foodlabel.sizeToFit()
         self.view.addSubview(foodlabel)
         
-        makeLabel.text = " 1. たまごを割って、軽く混ぜる \n 2. 調味料をいれて混ぜる \n 3. 油をひいて、強火にかける \n 4. 卵液を箸で落とし数秒で固まる温度になったら\n   　火を少し弱めて、卵液を半分くらい流し込む \n 5. 半熟になったらフライ返しで巻く \n 6. 残りの卵液を流し込む \n 7. 最後は弱火にして、卵液を流し込み、形を整える \n 8. 切ってお皿に盛り付けて、完成！！ \n 9. ななめに切るとハートにできるよ！\n\n\n\n\n\n\n\n\n\n\n\n\n\n12"
+        makeLabel.text = " 1. たまごを割って、軽く混ぜる \n 2. 調味料をいれて混ぜる \n 3. 油をひいて、強火にかける \n 4. 卵液を箸で落とし数秒で固まる温度になったら\n   　火を少し弱めて、卵液を半分くらい流し込む \n 5. 半熟になったらフライ返しで巻く \n 6. 残りの卵液を流し込む \n 7. 最後は弱火にして、卵液を流し込み、形を整える \n 8. 切ってお皿に盛り付けて、完成！！ \n 9. ななめに切るとハートにできるよ！"
+        //\n\n\n\n\n\n\n\n\n\n\n\n\n\n12
         ingredientImage.image = UIImage(named: "ingre.gif")
         makeLabel.numberOfLines = 0
 //        makeLabel.sizeToFit()
@@ -87,15 +86,10 @@ class AllViewController: UIViewController, UIActionSheetDelegate {
         makeLabel.text = "じゃがいもは皮をむき、一口大に切って、水にさらして水気を切る。\nたまねぎは2cm幅のくし切りにする。"
         ingredientImage.image = UIImage(named: "zai.gif")
     }
-    
-    func hamburg() {
-        foodlabel.text = "はん"
-        makeLabel.text = ""
-        ingredientImage.image = UIImage(named: "zai.gif")
-    }
+
     
     func omuRice() {
-        foodlabel.text = "卵　\n 牛乳　\nバター　鶏もも肉（ベーコン、ハム）　たまねぎ　白米　ケチャップ　塩コショウ　油"
+        foodlabel.text = "卵　\n 牛乳　\nバター　鶏もも肉　玉ねぎ　白米　ケチャップ　塩コショウ　油"
         makeLabel.text = "1.\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17"
         ingredientImage.image = UIImage(named: "zai.gif")
     }

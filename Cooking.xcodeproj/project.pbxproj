@@ -893,7 +893,7 @@
 				TargetAttributes = {
 					D0A221671C759AAB006E2F2B = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = DYQ5RU68TK;
+						DevelopmentTeam = 393T7VJW2G;
 					};
 					D0A2217B1C759AAB006E2F2B = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -1308,7 +1308,7 @@
 				INFOPLIST_FILE = Cooking/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.sekine.Cooking;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yurisekine.Cooking;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -1322,7 +1322,7 @@
 				INFOPLIST_FILE = Cooking/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.sekine.Cooking;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yurisekine.Cooking;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

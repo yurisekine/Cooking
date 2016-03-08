@@ -18,7 +18,6 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     let menuArray = [
         "玉子焼き",
         "肉じゃが",
-        "ハンバーグ",
         "オムライス"
     ]
     
@@ -34,7 +33,6 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         menuImageArray = [
                 UIImage(named: "egg9.jpg")!,
                 UIImage(named: "meatpotato.gif")!,
-                UIImage(named: "han.gif")!,
                 UIImage(named: "omu.gif")!
         ]
     }
